@@ -9,16 +9,14 @@
     }
     .container{
         background-color: #ccc;
+        position: relative;
+        overflow: auto;
     }
         .header {
             width: 100%;
             height:60px;
             background-color: #303030;
         }
-        body {
-            margin: 0;
-            padding: 0;
-            }
         p { text-indent:2em;
             padding:0px;
             margin:0px; }
@@ -61,7 +59,7 @@
             border: 1px solid #cccccc;
             border-collapse: collapse;
             font-size: 1px;
-            width: 830px;
+            width:100%;
         }
         tr th {
             padding: 5px;
@@ -73,23 +71,30 @@
         .trl{
             background-color: #C0C0C0 ;
         }
+        .main{
+            height: 100%;
+            width:100%;
+            position: relative;
+            background-color: #ccc;
+/*            overflow: hidden;*/
+        }
         .box1,.box2,.box3,.box4,.box5{
-            width: 830px;
             background-color: #fff;
-            margin: 20px;
+            margin: 20px 490px 20px 20px;
             padding: 20px;
             box-shadow: 1px 1px 1px 1px #303030;
+            display: block;
+            flex-wrap: wrap;
         }
         .box5{
-            width: 360px;
+            width: 400px;
             background-color: #ffffff;
             margin: 20px;
             padding: 20px;
             box-shadow: 1px 1px 1px 1px #303030;
-            float: right;
-            position: fixed;
-            right: 10px;
-            top: 60px;
+            position: absolute;
+            top: -20px;
+            right: 0px;
         }
         form {
         display: block;
@@ -165,6 +170,7 @@
         <li><a href="http://ife.baidu.com">导航链接四</a></li>
     </ul>
 </div>
+<div class="main">
 <div class="box1">
 <h2>文章一级标题</h2>
 <h3>文章二级标题</h3>
@@ -172,7 +178,7 @@
 <p>在这篇文章中，数据科学家与分析师 Vincent Granville 明晰了数据科学家所具有的不同角色，以及数据科学与机器学习、深度学习、人工智能、统计学等领域的区别。这些概念的区别也一直是人工智能领域热烈讨论的一个话题，Quora、多个技术博客都曾有过解答。机器之心之前编译的一篇文章《人工智能、机器学习、深度学习，三者之间的同心圆关系》也对此问题进行了探讨，但似乎业内还未能给出一个权威的、令所有人信服的回答。如果对这篇文章中的观点不认同，欢迎大家留言讨论。<br>
 在这篇文章中，数据科学家与分析师 Vincent Granville 明晰了数据科学家所具有的不同角色，以及数据科学与机器学习、深度学习、人工智能、统计学、物联网、运筹学和应用数学等相关领域的比较和重叠。Granville 介绍说，由于数据科学是一个范围很广的学科，所以他首先介绍了在业务环境中可能会遇到的数据科学家的类型：你甚至可能会发现你自己原来也是某种数据科学家。和其它任何科学学科一样，数据科学也可能会从其它相关学科借用技术；当然，我们也已经开发出了自己的技术库，尤其是让我们可以以自动化的方式（甚至完全无需人类干预）处理非常大规模的非结构化数据集的技术和算法，进而实时执行交易或进行预测。1. 数据科学家具有哪些不同类型？</p>
 要更详细地了解数据科学家的类型，可<a href="http://suo.im/28rlX1">参阅文章</a>更多有用的信息可点击<a href="http://ife.baidu.com">链接</a></p>
-<img src="http://img.mp.itc.cn/upload/20170226/9928abce324949659ad519dfeb518d52_th.jpeg">
+<img src="http://img.mp.itc.cn/upload/20170226/9928abce324949659ad519dfeb518d52_th.jpeg" width="60%">
 <p>2. 机器学习对比深度学习
 在深入探讨数据学习与机器学习之间的区别前，我们先简单讨论下机器学习与深度学习的区别。机器学习一系列在数据集上进行训练的算法，来做出预测或采取形同从而对系统进行优化。例如，基于历史数据，监督分类算法就被用来分类潜在的客户或贷款意向。根据给定任务的不同（例如，监督式聚类），用到的技术也不同：朴素贝叶斯、支持向量机、神经网络、ensembles、关联规则、决策树、逻辑回归或多种方法之间的结合。
 这些都是数据科学的分支。当这些算法被用于自动化的时候，就像在自动飞行或无人驾驶汽车中，它被称为人工智能，更具体的细说，就是深度学习。如果数据收集自传感器，通过互联网进行传输，那就是机器学习或数据科学或深度学习应用到了 IoT 上。<a href="http://ife.baidu.com">链接</a></p>
@@ -187,7 +193,7 @@
 <h4>学习者 学习时间</h4>
 <p>IFE 历史精选课程，跟着小薇一起零基础入门HTML/CSS，12个任务等你来<a href="http://ife.baidu.com">挑战</a><br/>
 共发布 12个课程，已经有 2575名学生在这里学习上课</p>
-<img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1488173352635&di=c02ddfa9a8870a490e1940dab1d3e1de&imgtype=0&src=http%3A%2F%2Fimage.lxway.com%2Fupload%2F4%2F04%2F404baa906332e282a43cd1223efd7970_thumb.png">
+<img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1488173352635&di=c02ddfa9a8870a490e1940dab1d3e1de&imgtype=0&src=http%3A%2F%2Fimage.lxway.com%2Fupload%2F4%2F04%2F404baa906332e282a43cd1223efd7970_thumb.png" width="60%">
 <ul style="list-style: none;">
     <li>&nbsp;&nbsp;&nbsp;&nbsp;列表项目一</li>
     <li>&nbsp;&nbsp;&nbsp;&nbsp;列表项目二</li>
@@ -313,6 +319,7 @@
 </form>
 </form>
 </form><br>
+</div>
 </div>
 <div class="bottom">
 <p class="bottoma">版权所有<span>&copy;</span></p>
