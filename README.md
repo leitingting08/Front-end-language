@@ -17,4 +17,18 @@
   top:0px;
   }`
 ###task1-6     任务六：通过HTML及CSS模拟报纸排版
-注意事项
+注意事项:
+* 如果先写font，再写line-height，显示效果正常，如果先写line-height，再写font，则line-height定义的效果会丢失
+* 让文字显示在图片上，可以吧图片放在`div`里，设置`{z-index：-1;}` 注意浮动会让z-index失效
+* 首字母大写且下划线粗细一致
+ ```<p class="ABOUT">about</p>
+    <p class="ABOUT">technologe</p>```
+```.ABOUT{
+  font-family:"微软雅黑";
+  font-size: 24px;
+  color: #000;
+  line-height: 40PX;
+  font-variant: small-caps;
+  text-transform: capitalize;/*text-transform 属性这个属性会改变元素中的字母大小写*/
+  text-decoration: underline;/*font-variant 属性设置小型大写字母的字体显示文本，这意味着所有的小写字母均会被转换为大写，但是所有使用小型大写字体的字母与其余文本相比，其字体尺寸更小*/
+}```
