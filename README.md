@@ -6,17 +6,17 @@
 只完成HTML，CSS代码编写，不写JavaScript
 ####task1-3    任务三：三栏式布局
 使用HTML与CSS实现三栏式布局
-###task1-4     任务四：定位和居中问题
+####task1-4     任务四：定位和居中问题
 灰色元素水平垂直居中，有两个四分之一圆位于其左上角和右下角
-###task1-5     任务五：零基础HTML及CSS编码（二）
+####task1-5     任务五：零基础HTML及CSS编码（二）
 基于第一个任务“零基础HTML编码”的代码，在步骤一的代码基础上增加CSS样式代码的编写
-* 使图片或`div`块相对于父元素固定而不随滚动条滚动，用容器`div`包裹图片或`div`块，例如:
-`img {position：absolute；left:0px;top:0px;}` * 
-###task1-6     任务六：通过HTML及CSS模拟报纸排版
+使图片或`div`块相对于父元素固定而不随滚动条滚动，用容器`div`包裹图片或`div`块，例如:
+`img {position：absolute；left:0px;top:0px;}`
+####task1-6     任务六：通过HTML及CSS模拟报纸排版
 注意事项
-* 如果先写font，再写line-height，显示效果正常，如果先写line-height，再写font，则line-height定义的效果会丢失 * 
-* 让文字显示在图片上，可以吧图片放在`div`里，设置`{z-index：-1;}` 注意浮动会让z-index失效 * 
-* 首字母大写且下划线粗细一致，示例：`<p class="ABOUT">about</p> <p class="ABOUT">technologe</p>` * 
+* 如果先写`font`，再写`line-height`，显示效果正常，如果先写`line-height`，再写`font`，则`line-heigh`t定义的效果会丢失
+* 让文字显示在图片上，可以吧图片放在`div`里，设置`{z-index：-1;}` 注意浮动会让`z-index`失效
+* 首字母大写且下划线粗细一致，示例：`<p class="ABOUT">about</p> <p class="ABOUT">technologe</p>`
 ``` .ABOUT {
   font-family:"微软雅黑";
   font-size: 24px;
