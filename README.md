@@ -14,7 +14,7 @@
 `img {position：absolute；left:0px;top:0px;}`
 ####task1-6     任务六：通过HTML及CSS模拟报纸排版
 注意事项
-* 如果先写`font`，再写`line-height`，显示效果正常，如果先写`line-height`，再写`font`，则`line-heigh`t定义的效果会丢失
+* 如果先写`font`，再写`line-height`，显示正常，如果先写`line-height`，再写`font`，则`line-heigh`t定义的效果会丢失
 * 让文字显示在图片上，可以吧图片放在`div`里，设置`{z-index：-1;}` 注意浮动会让`z-index`失效
 * 首字母大写且下划线粗细一致，示例：`<p class="ABOUT">about</p> <p class="ABOUT">technologe</p>`
 ``` .ABOUT {
@@ -23,6 +23,6 @@
   color: #000;
   line-height: 40PX;
   font-variant: small-caps;
-  text-transform: capitalize;/*text-transform 属性这个属性会改变元素中的字母大小写*/
-  text-decoration: underline;/*font-variant 属性设置小型大写字母的字体显示文本，这意味着所有的小写字母均会被转换为大写，但是所有使用小型大写字体的字母与其余文本相比，其字体尺寸更小*/
+  text-transform: capitalize;  /*text-transform 这个属性会改变元素中的字母大小写*/
+  text-decoration: underline;  /*font-variant 属性设置小型大写字母的字体显示文本，这意味着所有的小写字母均会被转换为大写*/
 }```
