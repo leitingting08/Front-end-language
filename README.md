@@ -20,10 +20,8 @@
 注意事项:
 * 如果先写font，再写line-height，显示效果正常，如果先写line-height，再写font，则line-height定义的效果会丢失
 * 让文字显示在图片上，可以吧图片放在`div`里，设置`{z-index：-1;}` 注意浮动会让z-index失效
-* 首字母大写且下划线粗细一致
- ```<p class="ABOUT">about</p>
-    <p class="ABOUT">technologe</p>```
-```.ABOUT{
+* 首字母大写且下划线粗细一致，示例：`<p class="ABOUT">about</p> <p class="ABOUT">technologe</p>`
+``` .ABOUT {
   font-family:"微软雅黑";
   font-size: 24px;
   color: #000;
