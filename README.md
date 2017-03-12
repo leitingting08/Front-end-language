@@ -12,13 +12,12 @@
 基于第一个任务“零基础HTML编码”的代码，在步骤一的代码基础上增加CSS样式代码的编写
 使图片或`div`块相对于父元素固定而不随滚动条滚动，用容器`div`包裹图片或`div`块，例如:
 `img {position：absolute；left:0px;top:0px;}`
-####task1-6     任务六：通过HTML及CSS模拟报纸排版
+####task1-6     任务六：通过HTML及CSS模拟报纸排版
 注意事项
 * 如果先写`font`，再写`line-height`，显示正常，如果先写`line-height`，再写`font`，则`line-heigh`t定义的效果会丢失
 * 让文字显示在图片上，可以吧图片放在`div`里，设置`{z-index：-1;}` 注意浮动会让`z-index`失效
 * 首字母大写且下划线粗细一致，示例：`<p class="ABOUT">about</p> <p class="ABOUT">technologe</p>`
-
-``` .ABOUT {
+` .ABOUT {
   font-family:"微软雅黑";
   font-size: 24px;
   color: #000;
@@ -26,4 +25,8 @@
   font-variant: small-caps;
   text-transform: capitalize;  /*text-transform 这个属性会改变元素中的字母大小写*/
   text-decoration: underline;  /*font-variant 属性设置小型大写字母的字体显示文本，这意味着所有的小写字母均会被转换为大写*/
-}```
+}`
+####task1-7     任务七：实现常见的技术产品官网的页面架构及样式布局
+* a 标签鼠标放上去样式改变:例 `a:hover{text-decoration：underline}`;鼠标放上去会显示下划线
+####task1-8     任务八：响应式网格（栅格化）布局
+* `@media` 媒体查询的使用，[bootstrap网格系统](http://www.w3cschool.cn/bootstrap/bootstrap-v2-grid-system.html)
