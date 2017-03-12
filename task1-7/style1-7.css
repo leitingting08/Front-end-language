@@ -62,11 +62,8 @@ body{
 .right li a{
     text-decoration: none;
 }
-.first a:hover{
-
-}
 .mid a:hover{
-
+    color: #EA0000;
 }
 .first a ,.land a{
     color: #EA0000;
@@ -307,6 +304,9 @@ footer{
     background-color: #FF2D2D;
     border:none;
 }
+.input button:hover{
+    opacity: 0.5;
+}
 .p6 h3{
     color: #fff;
     font-size: 20px;
@@ -365,9 +365,6 @@ footer{
     width: 66.67%;
 }
 .r{
-/*    position: relative;
-    top: 0;
-    right: 0;*/
     width: 33.33%;
 }
 .r h2{
@@ -399,12 +396,94 @@ footer{
     margin-top: 20px;
     margin-left:180px;
 }
+.l1 {
+    position: absolute;
+    top: 0px;
+    width: 33.33%;
+}
 .l1 img{
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 33.33%;
+    top: 0px;
+    z-index: 2;
+    width: 100%;
+}
+.about{
+    position: absolute;
+    top: 200px;
+    left: 33%;
+    z-index: 4;
+    text-align: center;
+}
+.about p{
+    font-size: 20px;
+    line-height: 1.5em;
+    color: #fff;
+}
+.about hr{
+    width: 30px;
+    height:2px;
+    margin-top: 30px;
+    margin-left: 60px;
+    background-color: #fff;
+    border:none;
 
+}
+.about button{
+    margin-top: 30px;
+    width: 150px;
+    height: 35px;
+    background-color: inherit;
+    border:1px solid #fff;
+}
+.about button a{
+    text-decoration: none;
+    color: #fff;
+}
+.about button a:hover{
+    color: #000;
+    text-decoration: underline;
+}
+.m1{
+    position: absolute;
+    top: 200px;
+    left: 44%;
+    text-align: center;
+}
+.m1 p{
+    font-size: 20px;
+    line-height: 1.5em;
+    color: #000;
+}
+.m1 hr{
+    width: 30px;
+    height:2px;
+    margin-top: 30px;
+    margin-left: 60px;
+    background-color: #000;
+    border:none;
+    opacity: 0.3;
+}
+.m1 button{
+    margin-top: 30px;
+    width: 150px;
+    height: 35px;
+    background-color: inherit;
+    border:1px solid #FF2D2D;
+}
+.m1 button a{
+    text-decoration: none;
+    color: #FF2D2D;
+}
+.m1 button a:hover{
+    color: #000;
+    text-decoration: underline;
+}
+.r1{
+    margin-left: 66.66%;
+    width: 33.33%;
+}
+.about p,hr,button{
+    color: #fff;
 }
 .r1 img{
     position: absolute;
@@ -412,6 +491,10 @@ footer{
     right: 0;
     width: 33.33%;
     z-index: 2;
+}
+.r1{
+    background-color: #000;
+    opacity: 0.7;
 }
 .t8{
     position: relative;
@@ -445,15 +528,24 @@ footer{
     position: relative;
     top: 100px;
     right:-50px;
+    padding: 10px;
+    margin: 10px;
+}
+.r2 input{
+    margin: 10px;
 }
 .t9 h5{
     font-size: 16px;
     line-height: 4em;
 }
-.l2 span{
+.l2 span a{
     margin-left:290px;
     font-size: 10px;
     font-family: "Times New Roman";
+    text-decoration: none;
+}
+.l2 span a:hover{
+    text-decoration: underline;
 }
 .l2 p,.r2 p{
     color: #000;
@@ -474,11 +566,16 @@ textarea{
 }
 .r2 button{
     margin-left: 10px;
+    margin-top: 20px;
     width: 635px;
     height: 40px;
     background-color: #F0F0F0;
     border:none;
     color: #000;
+}
+.r2 button:hover{
+    background-color: #000;
+    opacity: 0.5;
 }
 .contain{
     position: relative;
@@ -500,6 +597,9 @@ textarea{
     width: 500px;
     height: 43px;
     border:none;
+    position: absolute;
+    top: 94px;
+    left: 0px;
 }
 .contain button{
     height: 43px;
@@ -509,6 +609,7 @@ textarea{
     margin-left: -10px;
     position: absolute;
     top: 94px;
+    left: 500px;
 }
 .contain button a{
     text-decoration: none;color: #fff;
