@@ -26,7 +26,9 @@
   text-transform: capitalize;  /*text-transform 这个属性会改变元素中的字母大小写*/
   text-decoration: underline;  /*font-variant 属性设置小型大写字母的字体显示文本，这意味着所有的小写字母均会被转换为大写*/
 }`
+
 ####task1-7     任务七：实现常见的技术产品官网的页面架构及样式布局
 * a 标签鼠标放上去样式改变:例 `a:hover{text-decoration：underline}`;鼠标放上去会显示下划线
+
 ####task1-8     任务八：响应式网格（栅格化）布局
 * `@media` 媒体查询的使用，[bootstrap网格系统](http://www.w3cschool.cn/bootstrap/bootstrap-v2-grid-system.html)
