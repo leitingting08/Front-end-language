@@ -4,75 +4,60 @@
     <title></title>
 </head>
 <style type="text/css">
-    body{
-        overflow: hidden;
-        padding: 20px;
-    }
+    html, body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
     .container{
         display: flex;
+        margin: 20px;
+        justify-content:space-between;
+        align-items: center;
         width: 100%;
         height: 100%;
     }
-    .box1{height: 120px; order: 0}
-    .box2{height: 100px; order: 1}
-    .box3{height: 40px; order: 2}
-    .box4{height: 200px; order: 3}
+    .box1{
+        height: 120px;
+        border:1px solid #f00;
+        }
+    .box2{
+        height: 100px;
+        border:1px solid #f00;
+        }
+    .box3{
+        height: 40px;
+        border:1px solid #f00;
+       }
+    .box4{height: 200px;
+        border:1px solid #0f0;
+        margin-right: 40px;
+    }
     .box1,.box2,.box3,.box4{
         width: 150px;
-        vertical-align: middle;
     }
-    .box2{
-        margin-left: calc((100%-620px)/3);
-        margin-top: 80px;
-    }
-    .box3{
-        /*margin-right: calc((100%-620px)/3);*/
-        margin-top: 120px;
-    }
-    .box1{
-        position: absolute;
-        left: 20px;
-        top:100px;
-    }
-    .box4{
-        position: absolute;
-        right: 20px;
-        top: 60px;
-        margin-left: calc((100%-620px)/3);
-    }
-    .box1,.box2,.box3{
-        border:1px solid #f00;
-        margin-right: calc((100%-620px)/6);
-    }
-    .box4{
-        border:1px solid #0f0;
-    }
+    .box,.box4-1{width: 25%;}
 
 @media screen and (max-width: 640px){
     .container{
         display: flex;
         flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
     }
-    .box1{height: 120px; order: 1}
-    .box2{height: 100px; order: 2}
-    .box3{height: 40px; order: 3}
-    .box4{height: 200px; order: 0}
+    .box4{order: -1;}
 }
 </style>
 <body>
 <div class="container">
-<div class="box1">
 
+<div class=" box1"></div>
+<div class=" box2"></div>
+<div class="box3"></div>
+<div class=" box4"></div>
 </div>
-<div class="box2">
 
-</div>
-<div class="box3">
-
-</div>
-<div class="box4">
-
-</div>
-</div>
 </body>
 </html>
