@@ -52,8 +52,8 @@ text-decoration: underline;
 function (){} //匿名函数 调用方法：元素.事件 = function (){}；
 * 测试：alert();弹出带一个确定按钮的警告框  
 * onload 加载完执行 `window.onload = myFunction;`
-* 希望把某个元素移出视线：  
-1、`display:none;`(显示为无) 
+* 希望把某个元素移出视线：    
+1、`display:none;`(显示为无)   
 2、`visibility:hidden;`(让元素隐藏)  
 3、改变`width/height`  
 4、透明度为0 
