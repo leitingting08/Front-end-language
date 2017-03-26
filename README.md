@@ -23,8 +23,8 @@
   color: #000;
   line-height: 40PX;
   font-variant: small-caps;
-  text-transform: capitalize;  /*text-transform 这个属性会改变元素中的字母大小写*/
-  text-decoration: underline;  /*font-variant 属性设置小型大写字母的字体显示文本，这意味着所有的小写字母均会被转换为大写*/
+  text-transform: capitalize;
+  text-decoration: underline;
 }`
 ### task1-7  任务七：实现常见的技术产品官网的页面架构及样式布局
 * a 标签鼠标放上去样式改变:例 `a:hover{text-decoration：underline}`;鼠标放上去会显示下划线
@@ -36,8 +36,8 @@
 * 通过设置 display 属性的值为 flex 或 inline-flex来定义弹性容器
 * 弹性容器里子元素自动成为弹性项目，并且弹性项目的float、clear和vertical-align属性将失效
 * Flex容器属性
-`flex-direction:row(主轴为水平方向，起点在左端) | row-reverse(主轴为水平方向，起点在右端)  column(主轴为垂直方向，起点在上沿) column-reverse(主轴为垂直方向，起点在下沿);`
-`flex-wrap:flex-wrap: nowrap (默认不换行)| wrap(可以多行，第一行在上方) | wrap-reverse(可以多行，第一行在下方);`
-`justify-content:flex-start(左对齐（默认）) | flex-end(右对齐) | center(居中对齐) | space-between(两端对齐，项目之间的间距相等) | space-around(均匀对齐，每个项目两端的间距相等);`
-`align-items:flex-start(交叉轴起点对齐) | flex-end(交叉轴终点对齐) | center(交叉轴居中对齐) | baseline(第一行文字的底部对齐) | stretch(如果项目没设置高度或者高度为auto,那么项目拉伸充满整个交叉轴空间);`
-`align-content(定义多行轴线的对齐方式（如果只有一行，该属性不起作用）)`
+`flex-direction:row`(主轴为水平方向，起点在左端) | `row-reverse`(主轴为水平方向，起点在右端)  `column`(主轴为垂直方向，起点在上沿) `column-reverse`(主轴为垂直方向，起点在下沿);
+`flex-wrap:flex-wrap: nowrap` (默认不换行)| `wrap`(可以多行，第一行在上方) | `wrap-reverse`(可以多行，第一行在下方);
+`justify-content:flex-start` (左对齐（默认）)| `flex-end`(右对齐) | `center`(居中对齐) | `space-between`(两端对齐，项目之间的间距相等) | `space-around`(均匀对齐，每个项目两端的间距相等);
+`align-items:flex-start`(交叉轴起点对齐) | `flex-end`(交叉轴终点对齐) | `center`(交叉轴居中对齐) | `baseline`(第一行文字的底部对齐) | `stretch`(如果项目没设置高度或者高度为`auto`,那么项目拉伸充满整个交叉轴空间);
+`align-content`(定义多行轴线的对齐方式（如果只有一行，该属性不起作用）
