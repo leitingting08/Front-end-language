@@ -31,21 +31,20 @@ var aqiData = [
   将空气质量指数大于60的城市显示到aqi-list的列表中
   */
 
-  function isBigEnough(a)
-  {
-    return a[1]>60;
-  }//过滤出空气质量大于60的数组b
-  var b = aqiData.filter(isBigEnough);
-     b.sort(function(a,c){
-      return c[1]-a[1];
-     });//对筛选出来的数组进行排序
-  (function write(){
-    for(var i=0;i<b.length;i++){
+ var arr = [];
+  for (var i = 0;i<aqiData.length; i++) {
+    if (aqiData[i][1]>60) {
+      arr.push(aqiData[i]);
+    }
+  }
+  var newarr=arr.sort(function(a,b){
+    return b[1]-a[1];
+  });
+    for (var i = 0; i < newarr.length; i++) {
       var li=document.createElement('li');
       document.getElementById('aqi-list').append(li);
-      li.innerHTML="第"+(i+1)+"名："+b[i];
-    }//把空气质量指数大于60的城市显示到aqi-list的列表中
-  })();
+      li.innerHTML='第'+(i+1)+'名：'+ newarr[i];
+    }
 })();
 
 </script>
