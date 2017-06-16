@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>解决jquery名称冲突</title>
+    <meta charset="utf-8">
+    <script src="jquery.min.js"></script>
+    <script>
+    $.noConflict();
+        jQuery(document).ready(function(){
+            jQuery("button").click(function(){
+            jQuery("p").text("jquery仍在运行！");
+            });
+        });
+    </script>
+</head>
+<body>
+<p>这是一个段落</p>
+<button>测试jquery</button>
+</body>
+</html>
