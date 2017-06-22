@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<script src="jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$(".btn1").click(function(){
+				$(":radio").hide();
+			});
+		});
+	</script>
+</head>
+<body>
+<form action="">
+	I have a bike:
+	<input type="radio" name="vehicle" value="bike"/><br/>
+	I have a car:
+	<input type="checkbox" name="vehicle" value="car"/><br/>
+	I have an airplane:
+	<input type="radio" name="vehicle" value="Airplane"/>
+</form>
+<button class="btn1">Hide checkboxes</button>
+</body>
+</html>

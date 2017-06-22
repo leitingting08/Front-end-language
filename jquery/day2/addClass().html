@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<script src="http://apps.bdimg.com/libs/jquery/1.6.4/jquery.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$("button").click(function(){
+				$("p:first").addClass("intro");
+			});
+		});
+	</script>
+	<style>
+		.intro
+		{
+			font-size: 120%;
+			color: red;
+		}
+	</style>
+</head>
+<body>
+<h1>这是标题</h1>
+<p>这是第一个段落</p>
+<p>这是第二个段落</p>
+<p>这是第三个段落</p>
+<button>向第一个p元素添加一个类</button>
+</body>
+</html>

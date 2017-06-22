@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("div").click(function(){
+                $(this).css("width",function(index, value){
+                    return parseFloat(value)*1.2;
+                });
+            });
+        });
+    </script>
+<style>
+    div {width: 100px;height: 50px;background-color: red;}
+</style>
+</head>
+
+<body>
+<div>请点击这里</div>
+</body>
+</html>
+

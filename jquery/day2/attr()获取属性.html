@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<script src="http://apps.bdimg.com/libs/jquery/1.6.4/jquery.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$("button").click(function(){
+				alert($("#baidu").attr("href"));
+			});
+		});
+	</script>
+</head>
+<body>
+<p><a href="http://www.baidu.com" id="baidu">baidu.com</a></p>
+<button>显示 herf 值</button>
+</body>
+</html>

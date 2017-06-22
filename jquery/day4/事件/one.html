@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <script src="jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        $("p").one("click",function(){
+            $(this).animate({fontSize:"+=6px"});
+        });
+    });
+    </script>
+</head>
+<body>
+
+<p>这是一个段落</p>
+<p>这是另一个段落</p>
+<p>请点击p元素增加其内容的文本大小。每个p元素只会触发一次改事件。</p>
+
+</body>
+</html>

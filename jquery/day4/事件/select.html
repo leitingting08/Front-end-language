@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <script src="jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        $("input").select(function(){
+            $("input").after("Text marked!");
+        });
+    });
+    </script>
+</head>
+<body>
+
+<input type="text" name="FirstName" value="Hello World" />
+<p>请试着选取输入域中的文本，看看会发生什么。</p>
+
+</body>
+</html>

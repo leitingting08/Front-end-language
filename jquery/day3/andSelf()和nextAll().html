@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <style type="text/css">
+        p, div { margin: 5px; padding: 5px; }
+        .border {border:2px solid red;}
+        .background{ background-color: yellow; }
+    </style>
+</head>
+<body>
+<div>
+    <p>First paragraph</p>
+    <p>Second paragraph</p>
+</div>
+    <script>
+        $("div").find("p").andSelf().addClass("border");
+        $("div").find("p").addClass("background");
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                $("ul li").removeClass(function(){
+                    return 'listitem_' + $(this).index();
+                });
+            });
+        });
+    </script>
+    <style type="text/css">
+        .listitem_1, .listitem_3
+        {
+            color: red;
+        }
+        .listitem_0, .listitem_2
+        {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+<h1>This is a heading</h1>
+<ul>
+    <li class="listitem_0">Apple</li>
+    <li class="listitem_1">IBM</li>
+    <li class="listitem_2">Microsoft</li>
+    <li class="listitem_3">Google</li>
+</ul>
+<button>删除列表中的类</button>
+</body>
+</html>

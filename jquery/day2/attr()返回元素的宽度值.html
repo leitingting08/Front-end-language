@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$("button").click(function(){
+				alert("Image width " + $("img").attr("width"));
+			});
+		});
+	</script>
+</head>
+<body>
+<img src="eg_smile.gif" width="128" height="128">
+<br/>
+<button>返回像素的宽度</button>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <script src="jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        $("button").click(function(e){
+           $("span").text(e.timeStamp);
+        });
+    });
+    </script>
+</head>
+<body>
+
+<p>对下面这个按钮的点击事件发生在1970年1月1日之后<span>unknow</span>毫秒。</p>
+<button>点击我</button>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <script src="http://www.w3school.com.cn/jquery/jquery.js"></script>
+    <script>
+    $(document).ready(function(){
+        $("button").toggle(
+        function(){
+            $("p").wrap("<div></div>");
+        },
+        function(){
+            $("p").unwrap();
+        });
+    });
+    </script>
+    <style type="text/css">
+        div{background-color: yellow;padding: 10px;}
+    </style>
+</head>
+<body>
+<p>this is a paragraph.</p>
+<button>包裹或解开p元素</button>
+</body>
+</html>

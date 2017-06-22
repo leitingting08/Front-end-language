@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        $("button").click(function(){
+            var txt="";
+            txt+="Width of div: " + $("#div1").width() + "</br>";
+            txt+="Height of div: " + $("#div1").height() + "</br>";
+            txt+="outer width of div: (margin included)" + $("#div1").outerWidth(true) +"</br>";
+            txt+="outer height of div: (margin included)" + $("#div1").outerHeight(true);
+            $("#div1").html(txt);
+        });
+    });
+    </script>
+</head>
+<body>
+<div id="div1" style="height: 100px;width: 360px;padding: 10px;margin: 3px;border:1px solid blue;background-color: lightblue;"></div>
+<br/>
+<button>显示div的尺寸</button>
+<p>innerWidth() - 返回元素的宽度（包括内边距、边框和外边距）</p>
+<p>innerHeight( -) 返回元素的高度（包括内边距、边框和内边距）</p>
+</body>
+</html>

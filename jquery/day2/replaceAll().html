@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                $(document.createElement("div")).replaceAll("p");
+            });
+        });
+    </script>
+    <style type="text/css">
+        div {height: 20px;background-color: yellow;margin: 10px;}
+    </style>
+</head>
+<body>
+<p>this is a paragraph</p>
+<p>this is another paragraph</p>
+<button>用新的div替换所有段落</button>
+</body>
+</html>
