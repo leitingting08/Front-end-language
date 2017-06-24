@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		div{width: 60px;height: 60px;
+			margin: 5px; float: left;
+			border: 2px white solid;}
+	</style>
+	<script type="text/javascript" src="jquery.3.2.1.min.js"></script>
+</head>
+<body>
+<div></div>
+<div class="middle"></div>
+<div class="middle"></div>
+<div class="middle"></div>
+<div class="middle"></div>
+<div></div>
+
+<script>
+	$("div").css("background","#e8ebcc")
+	.filter(".middle")
+	.css("border-color", "red");
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="jquery.3.2.1.min.js"></script>
+<script type="text/javascript">
+
+    $(document).ready(function(){
+        $("button").click(function(){
+           x=$("li").toArray()
+           for (var i = 0; i < x.length; i++) {
+               alert(x[i].innerHTML);
+           }
+        });
+    });
+</script>
+</head>
+<body>
+
+<button>输出li元素的数目</button>
+<ul>
+    <li>coffee</li>
+    <li>milk</li>
+    <li>soda</li>
+</ul>
+
+</body>
+</html>

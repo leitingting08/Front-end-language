@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="jquery.3.2.1.min.js"></script>
+	<style type="text/css">
+		div {width: 70px; height: 70px;background-color: #abc;
+			border:2px solid black; margin: 10px; float: left; }
+		div.before{border-color: red;}
+	</style>
+</head>
+<body>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<script>
+	$('div:last').prevAll().addClass("before");
+</script>
+</body>
+</html>

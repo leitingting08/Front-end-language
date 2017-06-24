@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="jquery.3.2.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("div").append("<p>" + $("div").context + "</p>").append("<p>" + $("div",document.body).context.nodeName + "</p>");
+        });
+    </script>
+</head>
+<body>
+<span>Context: <div></div></span>
+<span><b>注释：</b>context 属性在jquery版本1.10中被弃用。</span>
+</body>
+</html>

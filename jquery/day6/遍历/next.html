@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		.hightlight{background-color: yellow}
+	</style>
+	<script type="text/javascript" src="jquery.3.2.1.min.js"></script>
+</head>
+<body>
+<p>Hello</p>
+<p class="selected">Hello Again</p>
+<div><span>And Again</span></div>
+
+<script>
+	$("p").next(".selected").css("background", "yellow");
+</script>
+</body>
+</html>

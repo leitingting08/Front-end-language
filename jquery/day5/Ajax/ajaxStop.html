@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <script src="jquery.3.2.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("div").ajaxStop(function(){
+                alert("所有AJAX请求已完成");
+            });
+            $("button").click(function(){
+                $("div").load("test1.txt");
+                $("div").load("test1.asp");
+            });
+        });
+    </script>
+</head>
+<body>
+
+<div id="txt"><h2>通过 AJAX 改变文本</h2></div>
+<button>改变内容</button>
+
+</body>
+</html>
