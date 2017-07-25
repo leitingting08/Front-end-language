@@ -1,0 +1,209 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>转转首页</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="js/jquery.3.2.1.min.js"></script>
+    <script>
+    $(document).ready(function(){
+	 /* $.ajax({
+		  url:"data.json",
+		  type:"GET",
+		  dataType:"json",
+		  error: function(error){alert(error);},
+		  success: function(data){
+		 $.each(data, function(i, j){
+			//alert(i);
+			 $.each(j, function(v, k){
+			//alert(k.img);	
+			//alert(data.row1[v].img);
+					
+$(".ul1").append('<li><img src="'+data.row1[v].img+'"/><p class="info"><span>转转</span>'+data.row1[v].info+'</p>'+'<p class="seller"><img src="'+data.row1[v].pic+'"/>'+data.row1[v].seller+'</p><p class="price">'+data.row1[v].price+'</p></li>');
+				 
+$(".ul2").append('<li><img src="'+data.row2[v].img+'"/><p class="info"><span>转转</span>'+data.row2[v].info+'</p>'+'<p class="seller"><img src="'+data.row2[v].pic+'"/>'+data.row2[v].seller+'</p><p class="price">'+data.row2[v].price+'</p></li>');
+
+$(".ul3").append('<li><img src="'+data.row3[v].img+'"/><p class="info"><span>转转</span>'+data.row3[v].info+'</p>'+'<p class="seller"><img src="'+data.row3[v].pic+'"/>'+data.row3[v].seller+'</p><p class="price">'+data.row3[v].price+'</p></li>');				
+
+			 });
+			 });
+		}
+    });*/
+			$(document).ready(function(){
+    $.ajax({
+      url:"data.json",
+      type:"GET",
+      dataType:"json",
+      error: function(error){alert(error)},
+      success: function(data){
+          console.log(data)
+          var row1=data.row1;
+          var row2=data.row2;
+          var row3=data.row3;
+          pushData(row1,".ul1");
+          pushData(row2,".ul2");
+          pushData(row3,".ul3");
+
+          function pushData(row,obj){
+            $.each(row,function(index,item){
+                var $li=$('<li></li>');
+                var $img=$('<img src="'+item.img+'"/>');
+                var $info=$('<p class="info"><span>转转</span>'+item.info+'</p>')
+                var $seller=$('<p class="seller"><img src="'+item.pic+'"/>'+item.seller+'</p>');
+                var $price=$('<p class="price">'+item.price+'</p>');
+                $li.append($img,$info,$seller,$price);
+                $(obj).append($li)
+            });
+          }
+		           }
+});	
+});	
+});
+    </script>
+</head>
+<body>
+
+<div class="container">
+<!-- 头部图片栏和列表 -->
+	<div class="header">
+              <!-- 图片 -->
+		<div class="header_banner">
+              <div>
+                     <img src="img/head.png">
+                     <div class="nav">
+			<p style="font-size: 25px;"><b>转转</b>-更专业的二手交易平台</p>
+			<h1 style="font-size: 54px;margin-left: 838px;">转转APP</h1>
+                     <p style="font-size: 34px;margin-left: 700px;">来  <img src="img/zhuan.png" />  闲置物品换成钱</p>
+			<span class="btn" style="margin-left: 838px;margin-top: 20px;"><a href="#">免 费 下 载</a></span>
+                     </div>
+		</div>
+              </div>
+              <!-- 列表 -->
+		<div  class="header_ul">
+			<ul>
+				<li><img src="img/img2.png"><span>真实个人 名企认证</span></li>
+
+				<li><img src="img/img3.png"><span>专业服务 专业保障</span></li>
+
+				<li><img src="img/img4.png"><span>担保交易 安全靠谱</span></li>
+
+				<li><img src="img/img5.png"><span>微信好友 趣味互动</span></li>
+			</ul>
+		</div>
+	</div>
+
+<!-- 中间的内容 -->
+	<div class="content">
+       <!-- 图片轮播 -->
+
+       <div id="box1">
+       <div id="slider-btn-left"><</div>
+       <div class="slider">
+       <a href="#"><img src="img/slider-5.jpg" /></a>
+       <a href="#"><img src="img/box1.png" /></a>
+       <a href="#"><img src="img/slider-1.jpg" /></a>
+       <a href="#"><img src="img/slider-2.jpg" /></a>
+       <a href="#"><img src="img/slider-3.jpg" /></a>
+       <a href="#"><img src="img/slider-4.jpg" /></a>
+       <a href="#"><img src="img/slider-5.jpg" /></a>
+       <a href="#"><img src="img/box1.png" /></a>
+       </div>
+       <div id="slider-btn-right">></div>
+              <ul>
+                     <li></li>
+                     <li></li>
+                     <li></li>
+                     <li></li>
+                     <li></li>
+                     <li></li>
+              </ul>
+
+       </div>
+<script type="text/javascript" src="js/jquery.3.2.1.min.js"></script>
+<script type="text/javascript" src="js/slider.js"></script>
+       <div class="box2">
+       	<h2>转转分类</h2>
+       	<ul class="list1">
+       		<li><a href="#">台式机</a></li>
+       		<li><a href="#">笔记本</a></li>
+       		<li><a href="#">平板电脑</a></li>
+       		<li><a href="#">手机</a></li>
+       		<li><a href="#">数码产品</a></li>
+       		<li><a href="#">家电</a></li>
+       		<li><a href="#">家具</a></li>
+       		<li><a href="#">家居用品</a></li>
+       	</ul>
+       	<ul class="list2">
+       		<li><a href="#">服饰衣帽</a></li>
+       		<li><a href="#">美容保健</a></li>
+       		<li><a href="#">文体户外</a></li>
+       		<li><a href="#">图书音像</a></li>
+       		<li><a href="#">摩托车</a></li>
+       		<li><a href="#">电动车</a></li>
+       		<li><a href="#">自行车</a></li>
+       		<li><a href="#">母婴儿童</a></li>
+       	</ul>
+       </div>
+       <div class="box3">
+       	<div class="title">
+       	<img src="img/phone.png"><span>手机数码</span>
+       		<ul>
+       		<li><a href="#">手机</a> <hr></li>
+       		<li><a href="#">电脑配件</a> <hr></li>
+       		<li><a href="#">笔记本</a> <hr></li>
+       		<li><a href="#">平板电脑</a> <hr></li>
+       		<li><a href="#">台式机</a> <hr></li>
+       		<li><a href="#">数码产品</a></li>
+       		</ul>
+       	</div>
+              <ul class="ul ul1">
+              
+              </ul>
+       </div>
+       <div class="box4">
+       	<div class="title">
+       	<img src="img/life.png"><span>生活家具</span>
+       	<ul>
+       		<li><a href="#">家用电器</a> <hr></li>
+       		<li><a href="#">家居家具</a> <hr></li>
+       		<li><a href="#">百元小家电</a> <hr></li>
+       		<li><a href="#">百元家居用品</a></li>
+       	</ul>
+       	</div>
+              <ul class="ul ul2">
+              
+              </ul>
+       </div>
+       <div class="box5">
+       	<div class="title">
+       	<img src="img/bike.png"><span>代步工具</span>
+       	<ul>
+       		<li><a href="#">摩托车</a> <hr></li>
+       		<li><a href="#">电动车</a> <hr></li>
+       		<li><a href="#">自行车</a> </li>
+       	</ul>
+              </div>
+              <ul class="ul ul3">
+              </ul>
+       </div>
+	</div>
+
+<!-- 底部二维码 -->
+<div class="qrcode">
+	<h2>更多精彩内容   快来转转</h2>
+	<img src="img/qrcode.png" />
+	<p>扫描二维码下载转转</p>
+</div>
+
+<!-- 网页底部信息栏 -->
+	<div class="footer">
+	<div>
+	<p>北京转转精神科技有限责任公司 日常联系地址：北京市朝阳区酒仙桥北路甲10号院105号楼</p>
+	<p>联系我们 微信服务号：转转</p>
+	<p>Copyright&copy 2015-2017 zhuanzhuan.com. All Rights Reserved.</p>
+	<p>京ICP11018762号-11</p>
+	</div>
+	</div>
+</div>
+</body>
+</html>

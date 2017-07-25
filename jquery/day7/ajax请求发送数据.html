@@ -1,0 +1,23 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script src="jquery.3.2.1.min.js"></script>
+<script>
+$(document).ready(function() {
+    $("input").keyup(function(){
+		txt=$("input").val();
+		$("span").load("/gethint.asp",{suggest:txt});
+	});
+});
+</script>
+</head>
+
+<body>
+<p>请在下面的输入框中输入名字（a 到 z 的字符）：</p>
+名字：<input type="text" />
+<p>建议：<span></span></p>
+<p>注释：我们在 <a href="http://www.w3school.com.cn/ajax/ajax_asp_php.asp" target="_blank">AJAX 教程</a> 中讲解过本例中使用的文件（gethint.asp）。</p>
+</body>
+</html>

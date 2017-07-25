@@ -1,0 +1,24 @@
+<html>
+<head>
+<meta charset="utf-8">
+<script type="text/javascript" src="jquery.3.2.1.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $("button").click(function(){
+    $.getJSON("ajax_json.js",function(result){
+      $.each(result, function(i, field){
+        $("p").append(field + " ");
+      });
+    });
+  });
+});
+</script>
+</head>
+
+<body>
+
+<button>获得 JSON 数据</button>
+<p></p>
+
+</body>
+</html>
