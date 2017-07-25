@@ -1,0 +1,56 @@
+*{margin: 0;padding: 0;font-family: "Microsoft YaHei UI"}
+ul li{list-style: none;}
+a{text-decoration: none;color: #fff;}
+body{min-width: 1349px;}
+hr{height: 2px;width: 16px;background-color: #07cbc9;border:none;margin: 10px auto;}
+.header,.footer{width:100%;background-color: #07cbc9;height: 50px;clear: both;}
+/*顶部*/
+.header ul{float: right;line-height: 50px;margin-right: 50px;}
+.header ul li{color: #fff;float: left;}
+.header ul li a{padding: 15px 20px;}
+.header ul li a:hover{background-color: #000;}
+/*banner区*/
+.banner{display: table;width: 100%;}
+.image img{width: 100%;min-width: 1349px;}
+.image{position:absolute;z-index: -1;}
+.message{position:relative;text-align:center;z-index: 9;height: 635px;display: table-cell;vertical-align: middle;}
+.message input,textarea,button{border:1px solid gray;padding: 10px;background-color: transparent;color: #fff;opacity:0.7;margin-top: 20px;}
+.message input,textarea{width: 300px;}
+.message input:hover{border: 1px solid #07cbc9;}
+.message textarea:hover{border: 1px solid #07cbc9;}
+.message button:hover{background-color:  #07cbc9;}
+/*ABOUT区*/
+/*第一行：纯文字*/
+.row1{/*padding: 20px 0;*/margin-top: 20px;}
+.row1 h2{text-align: center;text-transform: uppercase;}
+.row1 p{width: 300px;margin: 0 auto;text-align: center;}
+/*第二行：文字和图片*/
+.row2{margin-top: 10px;width: 650px;margin: 0 auto;position: relative;overflow: hidden;}
+.p1{text-transform: uppercase;font-size: 20px;width: 120px;}
+.row2 span{display:inline-block;/*width: 230px;*/border:1px solid gray;padding: 20px;position: absolute;left: 0;background:rgba(255,255,255,0.2) none repeat scroll !important;}
+.row2 span button{background:#000;border-color: #000;}
+.row2 span button:hover{background-color: transparent;color:#000;border: 1px solid black;}
+.row2 img{width: 60%;height: 60%;float: left;/*position: relative;*/margin-left: 120px;margin-top: -46px;}
+.block{position: absolute;right: 0;top: 0;}
+.block div{width: 100px;height: 60px;border-bottom: 1px solid #07cbc9;border-right: 1px solid #07cbc9;padding: 10px;margin-top: 20px;}
+.block div p,h4{text-align: center;}
+/*第三行：图片排列*/
+.row3{margin-top: 50px;font-size: 0;height: 676px;}
+.row3 img{width: 25%;height:338px;display: inline-block;float: left;}
+.row3 div{width: 25%;height:338px;display: inline-block;background-color:#07cbc9;color:#fff;float: left; text-align: center;}
+.row3 div h4{font-size: 20px;margin: 20px 30px;}
+.row3 div h5{font-size: 14px;margin: 20px 30px;line-height: 1.5em;text-align: left;}
+.row3 div p{font-size: 10px;margin: 20px 30px;line-height: 1.5em;text-align: left;}
+.row3 div button{background: #000;border: 1px solid #000;}
+.row3 div button:hover{background-color: transparent;}
+/*GALLERY区*/
+.txt{margin-top: 20px;}
+.txt h2{text-align: center;text-transform: uppercase;}
+.txt p{width: 300px;margin: 0 auto;text-align: center;}
+.gallery{margin-bottom: 50px;}
+.gallery img{width: 200px;}
+.gallery ul li p{background-color: #000;width: 190px;color: #fff;height: 30px;text-align: left;padding-left: 10px;margin-top:-4px;padding-top: 8px;}
+.gallery ul{width:680px;overflow: hidden;zoom:1;margin: 0 auto;}
+.gallery ul li{float: left;padding: 10px;}
+/*底部*/
+.footer p{color: #fff;line-height: 50px;text-align: center;}
