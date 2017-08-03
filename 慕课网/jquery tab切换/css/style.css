@@ -1,0 +1,12 @@
+*{margin: 0;padding: 0;}
+/*导航菜单*/
+body{font-family: "Microsoft YaHei";}
+.main{width:602px;height:263px;margin: 20px auto;overflow: hidden;}
+.nav ul{width: 600px;overflow: hidden;border: 1px solid #f3f3f3;border-bottom: #fc0;}
+.nav ul li{float: left;list-style: none;width: 150px;text-align: center;background-color: #fff;padding: 5px 0;border-radius: 5px;cursor: pointer;}
+.nav ul .active{background-color: #fc0;font-weight: bold;cursor: pointer;}
+/*轮播图*/
+.banner{width:602px;overflow: hidden;position: relative;}
+img{width: 100%;}
+img .banner-slide{vertical-align: bottom;position: absolute;display: none;}
+
