@@ -2,31 +2,31 @@ $(document).ready(function(){
 // 点击弹出登录框
 $("#loginLink").click(function(){
 	var loginHtml = $("#loginHtml").html();
-     showLayer(loginHtml,260,300,closeCallback);
+     showLayer(loginHtml,260,290,closeCallback);
 
      $("#loginHtml").blur(function(){
-        // var username = $("input[name='username']").val();
-        // var password = $("input[name='password']").val();
-        // if(username === 'imooc' && password === 'imooc'){
-        // 	alert("登录成功");
-        // }else{
-        // 	$(".error-msg").html("账号密码输入错误");
-        // }
+        var username = $("input[name='username']").val();
+        var password = $("input[name='password']").val();
+        if(username === 'imooc' && password === 'imooc'){
+        	alert("登录成功");
+        }else{
+        	$(".error-msg").html("账号密码输入错误");
+        }
      });
 });
 
 $("#regeLink").click(function(){
 	var regeHtml = $("#regeHtml").html();
-     showLayer(regeHtml,260,260,closeCallback);
+     showLayer(regeHtml,260,250,closeCallback);
 
      $("#loginSubmitBtn").click(function(){
-        // var username = $("input[name='username']").val();
-        // var password = $("input[name='password']").val();
-        // if(username === 'imooc' && password === 'imooc'){
-        // 	alert("注册成功");
-        // }else{
-        // 	$(".error-msg").html("账号密码输入错误");
-        // }
+        var username = $("input[name='username']").val();
+        var password = $("input[name='password']").val();
+        if(username === 'imooc' && password === 'imooc'){
+        	alert("注册成功");
+        }else{
+        	$(".error-msg").html("账号密码输入错误");
+        }
      });
 });
 
@@ -34,12 +34,18 @@ function closeCallback(){
 	$(".error-msg").html("");
 }
 
+$("#rege").click(function(){
+  showLayer(loginHtml,260,290,closeCallback);
+});
+$("#loge").click(function(){
+  showLayer(loginHtml,260,290,closeCallback);
+});
 
 //显示弹出层
 function showLayer(html,width,height,closeCallback){
 	$(".layer-mask").css('display','block');
 	$(".layer-pop").css('display','block');
-	$(".layer-content").css({
+	$(".layer-pop").css({
 		width:width,
 		height:height
 	});
@@ -60,11 +66,13 @@ function hideLayer(){
 
 //点击框里的登录，注册字，跳转到相应页面
 $("#loge").click(function(){
+   $(".layer-pop").hide();
     showLayer(logeHtml,260,300,closeCallback);
 });
 
 $("#rege").click(function(){
-    showLayer(regeHtml,260,260,closeCallback);
+   $(".layer-pop").hide();
+    showLayer(regeHtml,260,250,closeCallback);
 });
 
 
@@ -85,13 +93,17 @@ $(".buy").hover(function(){
   $(".buy span").css("color","#f01414");
   $(".div1").show();
 },function(){
-  $(this).css({"background-color":"#f01414","color":"#fff"});
+
+  $(".div1").hover(function(){
+    $(this).show();
+  },function(){
+    $(this).hide();
+  $(".buy").css({"background-color":"#f01414","color":"#fff"});
   $(".c").attr("src","img/icon/26.png");
   $(".v").attr("src","img/icon/23.png");
   $(".buy span").css("color","#fff");
-  $(".div1").hide();
 });
-
+});
 
 
 
@@ -103,11 +115,11 @@ $(document).ready(function(){
     var t,count,
         index=0,
         len=$(".banner img").length;
-        
+
     //  初始化状态，在第一张
     $(".banner img:not(:first-child)").hide();
     $(".dots span:first-child").addClass("active");
-   
+
    // 滑过鼠标清除定时器,滑开继续
     $(".banner").hover(function(){
         clearInterval(t);
@@ -136,7 +148,7 @@ $(document).ready(function(){
         count=$(".active").index();
         count--;
         if(count < 0){count=len-1;}
-        changOption(count);     
+        changOption(count);
     });
     $(".next").click(function(){
         count=$(".active").index();
@@ -162,6 +174,14 @@ function changOption(curIndex){
 }
 
 });
+
+
+
+$(".row2 h2 p a").click(function(){
+  $(this).css("color","#f01414");
+
+});
+
 
 
 
