@@ -8,6 +8,17 @@
 	<script src="js/script.js"></script>
 </head>
 <body>
+
+<!-- 右侧固定栏 -->
+<div class="right-nav">
+<ul>
+<li><span>会员</span><img src="img/icon/13.png"></li>
+<li><span>购物车</span><img src="img/icon/14.png"></li>
+<li><span>我的关注</span><img src="img/icon/15.png"></li>
+<li><span>我的消息</span><img src="img/icon/16.png"></li>
+<li><span>顶部</span><a href="#"><img src="img/icon/17.png"></a></li>
+</ul>
+</div>
 <div class="container">
 
 <!-- 头部栏 -->
@@ -313,13 +324,25 @@
 
 </div>
 
+
+<!-- 楼层区 -->
+<!-- 左侧楼层导航 -->
+<div class="nav-floor">
+	<ul>
+		<li><a href="#f1">1F</a></li>
+		<li><a href="#f2">2F</a></li>
+		<li><a href="#f3">3F</a></li>
+		<li><a href="#f4">4F</a></li>
+		<li><a href="#f5">5F</a></li>
+	</ul>
+</div>
 	<div class="row2">
-	<h2><span>1F</span>服装鞋包
-	<p><a href="javascript:void(0)">大牌<img src="img/floor-arrow.png" class="img f"></a>|<a href="javascript:void(0)">男装<img src="img/floor-arrow.png" class="img"></a>|<a href="javascript:void(0)">女装<img src="img/floor-arrow.png" class="img"></a></p>
+	<h2><span><a name="f1">1F</a></span>服装鞋包
+	<p><a href="javascript:void(0)" id="0">大牌<img src="img/floor-arrow.png" class="img f"></a>|<a href="javascript:void(0)" id="1">男装<img src="img/floor-arrow.png" class="img"></a>|<a href="javascript:void(0)" id="2">女装<img src="img/floor-arrow.png" class="img"></a></p>
 	</h2>
 
     <hr class="t" />
-	<ul>
+	<ul class="ul1">
 	   <li>
 	   	<img src="img/floor/1.png">
 	   	<p>外套外套外套外套外套</p>
@@ -381,14 +404,14 @@
 	   	<p class="price">￥479</p>
 	   </li>
 	</ul>
-		<ul>
+		<ul class="ul2">
 		<li>
 			<img src="img/floor/1.jpg">
 			<p>外套外套外套外套外套</p>
 	   		<p class="price">￥479</p>
 		</li>
 	</ul>
-	<ul>
+	<ul class="ul3">
 		<li>
 			<img src="img/floor/2.jpg">
 			<p>外套外套外套外套外套</p>
@@ -397,11 +420,11 @@
 	</ul>
 	</div>
 	<div class="row2">
-	<h2><span>2F</span>个护美妆
-	<p><a href="#">热门<img src="img/floor-arrow.png"></a>|<a href="#">国际大牌<img src="img/floor-arrow.png"></a>|<a href="#">国际名品<img src="img/floor-arrow.png"></a></p>
+	<h2><span><a name="f2">2F</a></span>个护美妆
+	<p><a href="#">热门<img src="img/floor-arrow.png" class="f"></a>|<a href="#">国际大牌<img src="img/floor-arrow.png" ></a>|<a href="#">国际名品<img src="img/floor-arrow.png"></a></p>
 	</h2>
 	<hr class="t" />
-	<ul>
+	<ul class="ul1">
 	   <li>
 	   	<img src="img/floor/6.jpg">
 	   	<p>外套外套外套外套外套</p>
@@ -479,11 +502,11 @@
 	</ul>
 	</div>
 	<div class="row2">
-	<h2><span>3F</span>手机通讯
-	<p><a href="#">热门<img src="img/floor-arrow.png"></a>|<a href="#">品质优选<img src="img/floor-arrow.png"></a>|<a href="#">新机尝鲜<img src="img/floor-arrow.png"></a></p>
+	<h2><span><a name="f3">3F</a></span>手机通讯
+	<p><a href="#">热门<img src="img/floor-arrow.png" class="f"></a>|<a href="#">品质优选<img src="img/floor-arrow.png"></a>|<a href="#">新机尝鲜<img src="img/floor-arrow.png"></a></p>
 	</h2>
 <hr class="t" />
-	<ul>
+	<ul class="ul1">
 	   <li>
 	   	<img src="img/floor/7.jpg">
 	   	<p>外套外套外套外套外套</p>
@@ -561,12 +584,12 @@
 	</ul>
 	</div>
 	<div class="row2">
-	<h2><span>4F</span>家用电器
-	<p><a href="#">热门<img src="img/floor-arrow.png"></a>|<a href="#">大家电<img src="img/floor-arrow.png"></a>|<a href="#">生活电器<img src="img/floor-arrow.png"></a></p>
+	<h2><span><a name="f4">4F</a></span>家用电器
+	<p><a href="#">热门<img src="img/floor-arrow.png" class="f"></a>|<a href="#">大家电<img src="img/floor-arrow.png"></a>|<a href="#">生活电器<img src="img/floor-arrow.png"></a></p>
 	</h2>
 
 <hr class="t" />
-	<ul>
+	<ul class="ul1">
 	   <li>
 	   	<img src="img/floor/8.jpg">
 	   	<p>外套外套外套外套外套</p>
@@ -645,11 +668,11 @@
 	</ul>
 	</div>
 	<div class="row2">
-	<h2><span>5F</span>电脑数码
-	<p><a href="#">热门<img src="img/floor-arrow.png"></a>|<a href="#">电脑平板<img src="img/floor-arrow.png"></a>|<a href="#">潮流影音<img src="img/floor-arrow.png"></a></p>
+	<h2><span><a name="f5">5F</a></span>电脑数码
+	<p><a href="#">热门<img src="img/floor-arrow.png" class="f"></a>|<a href="#">电脑平板<img src="img/floor-arrow.png"></a>|<a href="#">潮流影音<img src="img/floor-arrow.png"></a></p>
 	</h2>
 <hr class="t" />
-	<ul>
+	<ul class="ul1">
 	   <li>
 	   	<img src="img/floor/9.jpg">
 	   	<p>外套外套外套外套外套</p>
@@ -738,7 +761,7 @@
 		<ul>
 			<li>消费者保障<p><a href="#">保障范围</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">退货退款流程</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">服务中心</a><br/><a href="#">更多特色服务</a></p></li>
 			<li>新手上路<P><a href="#">新手专区</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="#">消费警示</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">交易安全</a><br/><a href="#">24小时在线帮助</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">免费开店</a></P></li>
-			<li>付款方式<P><a href="#">快捷支付</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="#">信用卡 </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">余额宝</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">蚂蚁花呗</a><br/><a href="#">货到付款</a></P></li>
+			<li>付款方式<P><a href="#">快捷支付</a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="#">信用卡 </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">余额宝</a>&nbsp;&nbsp;&nbsp;<a href="#">蚂蚁花呗</a><br/><a href="#">货到付款</a></P></li>
 			<li>慕淘特色<P><a href="#">手机慕淘</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">旺旺/旺信</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="#">大众评审</a></P></li>
 		</ul>
 	</div>
@@ -805,10 +828,10 @@
 
 <div id="loginHtml" style="display: none;">
 	<p><a href="#" class="l">登录</a><a href="#" id="rege">注册</a><img src="img/icon/20.png" class="close-btn"></p>
-		<input class="input" type="text" placeholder="请输入登录邮箱和手机号"  />
+		<input class="input" type="text" name="username" placeholder="请输入登录邮箱和手机号"  />
 		<P id="erro-msg"></P>
-		<input class="input" type="text" placeholder="6-16位密码" />
-		<P id="erro-msg"></P>
+		<input class="input" type="password" name="password" placeholder="6-16位密码" />
+		<P id="erro-msg2"></P>
 		<p class="a"><input type='checkbox'><a href="#" class="auto">下次自动登录</a> <a href="#" id="forget">忘记密码</a></p>
 		<button id="loginSubmitBtn">登录</button>
 		<p class="social"><img src="img/icon/xinlang.png"><img src="img/icon/weixin.png"><img src="img/icon/QQ.png"></p>
@@ -816,11 +839,11 @@
 
 <div id="regeHtml" style="display: none;">
 	<p><a href="#" id="loge">登录</a><a href="#" class="r">注册</a><img src="img/icon/20.png" class="close-btn"></p>
-		<input class="input" type="text" placeholder="请输入注册邮箱/手机号"  />
-		<P id="erro-msg"></P>
-		<input class="input" type="text" placeholder="请输入验证码" />
-		<P id="erro-msg"></P>
-		<button id="loginSubmitBtn">登录</button>
+		<input class="input" type="text" name="username" placeholder="请输入注册邮箱/手机号"  />
+		<P id="erro-msg3"></P>
+		<input class="input" type="password" name="verify" placeholder="请输入验证码" id="verify" /><img src="img/verify.png" id="img-verify">
+		<P id="erro-msg4"></P>
+		<button id="loginSubmitBtn1">登录</button>
 		<p class="social"><img src="img/icon/xinlang.png"><img src="img/icon/weixin.png"><img src="img/icon/QQ.png"></p>
 </div>
 
