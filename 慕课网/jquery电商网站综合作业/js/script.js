@@ -1,37 +1,36 @@
 $(document).ready(function(){
 // 点击弹出登录框
 $("#loginLink").click(function(){
-	var loginHtml = $("#loginHtml").html();
+    var loginHtml = $("#loginHtml").html();
      showLayer(loginHtml,260,290,closeCallback);
-
-     $("#loginHtml").blur(function(){
+     $("#loginSubmitBtn").click(function(){
         var username = $("input[name='username']").val();
         var password = $("input[name='password']").val();
         if(username === 'imooc' && password === 'imooc'){
-        	alert("登录成功");
-        }else{
-        	$(".error-msg").html("账号密码输入错误");
+            alert("登录成功");
+        }else {
+            $(".error-msg").html("账号密码输入错误");
         }
      });
 });
 
 $("#regeLink").click(function(){
-	var regeHtml = $("#regeHtml").html();
+    var regeHtml = $("#regeHtml").html();
      showLayer(regeHtml,260,250,closeCallback);
 
-     $("#loginSubmitBtn").click(function(){
+     $("#loginSubmitBtn1").click(function(){
         var username = $("input[name='username']").val();
-        var password = $("input[name='password']").val();
-        if(username === 'imooc' && password === 'imooc'){
-        	alert("注册成功");
+        var verify = $("input[name='verify']").val();
+        if(username === 'imooc' && verify === 'Gyyd'){
+            alert("注册成功");
         }else{
-        	$(".error-msg").html("账号密码输入错误");
+            $(".error-msg3").html("账号密码输入错误");
         }
      });
 });
 
 function closeCallback(){
-	$(".error-msg").html("");
+    $(".error-msg").html("");
 }
 
 $("#rege").click(function(){
@@ -43,18 +42,18 @@ $("#loge").click(function(){
 
 //显示弹出层
 function showLayer(html,width,height,closeCallback){
-	$(".layer-mask").css('display','block');
-	$(".layer-pop").css('display','block');
-	$(".layer-pop").css({
-		width:width,
-		height:height
-	});
-	$(".layer-content").html(html);
+    $(".layer-mask").css('display','block');
+    $(".layer-pop").css('display','block');
+    $(".layer-pop").css({
+        width:width,
+        height:height
+    });
+    $(".layer-content").html(html);
 
-	$(".close-btn").click(function(){
-		hideLayer();
-		closeCallback();
-	});
+    $(".close-btn").click(function(){
+        hideLayer();
+        closeCallback();
+    });
 }
 
 //隐藏弹出层
@@ -175,15 +174,6 @@ function changOption(curIndex){
 
 });
 
-
-
-$(".row2 h2 p a").click(function(){
-  $(this).css("color","#f01414");
-
-});
-
-
-
-
-
+$(".f").show();
+$(".ul1").show();
 });
