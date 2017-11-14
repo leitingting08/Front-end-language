@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script
+  src="http://code.jquery.com/jquery-1.12.4.min.js"
+  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+  crossorigin="anonymous"></script>
+</head>
+<style type="text/css">
+	.trainseats{
+	display: inline-block;
+    width: 16px;
+    height: 32px;
+    vertical-align: middle;
+    color: transparent;
+    background: url(train_seat_icon.png) no-repeat;
+    border-left: 1px solid #aaa;
+    padding: 0 16px;
+    cursor: default;
+}
+.seatA{background-position: 1px -5px;}
+.seatB{background-position: -41px -5px;}
+.seatC{background-position: -85px -5px;}
+.seatD{background-position: -126px -5px;}
+.seatF{background-position: -170px -5px;}
+.seatC,.seatF{border-right: 1px solid #aaa;}
+
+.active{background-position-y: -45px;}
+</style>
+<body>
+<div class="seat">
+	窗
+	<span class="trainseats seatA">A</span>
+	<span class="trainseats seatB">B</span>
+	<span class="trainseats seatC">C</span>
+	过道
+	<span class="trainseats seatD">D</span>
+	<span class="trainseats seatF">F</span>
+	窗
+</div>
+<script type="text/javascript">
+	var arr=[];
+
+$(document).on('click','.trainseats',function(){
+	var index=$(this).index();
+	if(!$(this).hasClass('active')){
+    $(this).addClass('active');
+    //把点击的index索引放进一个数组里
+    arr.push(index);
+    // console.log(arr);
+}else{
+	$(this).removeClass('active');
+	//遍历数组，把第二次点击的元素移除
+	$.each(arr,function(i,item){
+		if(item==index){
+			arr.splice(index,1);
+		}
+	});
+}
+//如果选择的座位数超过3,则移除数组中的第一个元素
+if(arr.length>3){
+	arr.shift();
+	console.log(arr);
+	$('.trainseats').removeClass('active');
+	$.each(arr,function(i,item){
+		$('.seat').find('.trainseats').eq(Number(item)).addClass('active');
+	
+	});
+}
+
+});
+</script>
+
+</body>
+
+</html>
