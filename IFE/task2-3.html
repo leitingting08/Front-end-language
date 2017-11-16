@@ -39,17 +39,16 @@ window.onload = function(){
   var resort = document.getElementById('resort');
   var btn = document.getElementById('sort-btn');
   var data = [];
-  var str = '';
 function getData() {
   /*
   coding here
   */
 
   for (var i = 0; i < source_li.length; i++) {
-    var arr = source_li[i].innerHTML;
+    var str = source_li[i].innerHTML;
     var AqiData = [];
-    AqiData.push(arr.slice(0,2));
-    AqiData.push(arr.slice(10,12));
+    AqiData.push(str.slice(0,2));
+    AqiData.push(str.slice(10,12));
     data.push(AqiData);
   }
 
@@ -99,10 +98,14 @@ function btnHandle() {
 }
 
 function init() {
-
+  var flag=1;
   // 在这下面给sort-btn绑定一个点击事件，点击时触发btnHandle函数
     btn.onclick = function(){
+      if(flag){
       btnHandle();
+      flag=0;
+    }
+
     }
 }
 

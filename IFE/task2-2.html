@@ -14,7 +14,6 @@
   </ul>
 
 <script type="text/javascript">
-
 var aqiData = [
   ["北京", 90],
   ["上海", 50],
@@ -24,29 +23,32 @@ var aqiData = [
   ["西安", 100]
 ];
   (function () {
-
   /*
   在注释下方编写代码
   遍历读取aqiData中各个城市的数据
   将空气质量指数大于60的城市显示到aqi-list的列表中
   */
 
+  // 第一步先把空气质量大于60的城市遍历出来放在一个新的数组里，结果为arr=[ ["北京", 90],["成都", 90],["西安", 100]]
  var arr = [];
   for (var i = 0;i<aqiData.length; i++) {
     if (aqiData[i][1]>60) {
       arr.push(aqiData[i]);
     }
   }
+
+  //第二步把得到的arr数组进行降序排序得到新数组newarr=[ ["西安", 100],["北京", 90],["成都", 90]]
   var newarr=arr.sort(function(a,b){
     return b[1]-a[1];
   });
+
+  //第三步创造一个元素li，把这个数组遍历显示到页面上
     for (var i = 0; i < newarr.length; i++) {
       var li=document.createElement('li');
       document.getElementById('aqi-list').append(li);
       li.innerHTML='第'+(i+1)+'名：'+ newarr[i];
     }
 })();
-
 </script>
 </body>
 </html>
