@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ife task2-4</title>
+	<style>
+         span{padding: 8px 16px;color: #fff;background: red;margin-right: 10px;}
+         #queue{margin-top: 10px;}
+	</style>
+</head>
+<body>
+	<div>
+		<input type="text" name="input" value="" id="input" />
+		<button id="leftin">左侧入</button>
+		<button id="rightin">右侧入</button>
+		&nbsp;&nbsp;&nbsp;&nbsp;
+		<button id="leftout">左侧出</button>
+		<button id="rightout">右侧出</button>
+	</div>
+	<div id="queue">
+	</div>
+</body>
+<script>
+	window.onload = function(){
+       var leftin = document.getElementById('leftin');
+       var leftout = document.getElementById('leftout');
+       var rightin = document.getElementById('rightin');
+       var rightout = document.getElementById('rightout');
+       var input = document.getElementById('input');
+       var queue = document.getElementById('queue');
+    //左侧入
+       leftin.onclick = function(){ 
+       	if(input.value !== "" && !(isNaN(input.value))){
+       		
+             var span = document.createElement('span');
+             var textnode = document.createTextNode(input.value);
+       		 span.appendChild(textnode);
+       		
+       		queue.insertBefore(span,queue.childNodes[0]);
+       	}else{
+       		alert("请输入数字！");
+       	}
+       }
+
+//  DOM没有提供insertAfter()方法，所以只能自己写一个。
+
+function insertAfter(newElement,targetElement) {
+
+  var parent = targetElement.parentNode;
+
+    parent.appendChild(newElement);
+ 
+}
+//右侧入
+       rightin.onclick = function(){ 
+       	if(input.value !== "" && !(isNaN(input.value))){
+       		
+             var span = document.createElement('span');
+             var textnode = document.createTextNode(input.value);
+       		 span.appendChild(textnode);
+       		 insertAfter(span,queue);
+       		
+       		// insertAfter(queue,span);
+       	}else{
+       		alert("请输入数字！");
+       	}
+       }
+
+//左侧出
+       leftout.onclick = function(){  	
+             var firstChild = queue.firstChild;
+       		 queue.removeChild(firstChild);
+       }
+//右侧出
+       rightout.onclick = function(){ 
+             var lastChild = queue.lastChild;
+       		 queue.removeChild(lastChild);
+       }
+	}
+</script>
+</html>
