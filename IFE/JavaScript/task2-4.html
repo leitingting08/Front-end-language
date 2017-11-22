@@ -27,12 +27,12 @@
        var rightout = document.getElementById('rightout');
        var input = document.getElementById('input');
        var queue = document.getElementById('queue');
+       
     //左侧入
        leftin.onclick = function(){ 
-       	if(input.value !== "" && !(isNaN(input.value))){
-       		
-             var span = document.createElement('span');
-             var textnode = document.createTextNode(input.value);
+       	if(input.value !== "" && !(isNaN(input.value))){ 		
+          var span = document.createElement('span');
+          var textnode = document.createTextNode(input.value);
        		 span.appendChild(textnode);
        		
        		queue.insertBefore(span,queue.childNodes[0]);
@@ -53,11 +53,10 @@ function insertAfter(newElement,targetElement) {
 //右侧入
        rightin.onclick = function(){ 
        	if(input.value !== "" && !(isNaN(input.value))){
-       		
-             var span = document.createElement('span');
-             var textnode = document.createTextNode(input.value);
+          var span = document.createElement('span');
+          var textnode = document.createTextNode(input.value);
        		 span.appendChild(textnode);
-       		 insertAfter(span,queue);
+       		 insertAfter(span,queue.childNodes[queue.length]);
        		
        		// insertAfter(queue,span);
        	}else{
@@ -69,11 +68,13 @@ function insertAfter(newElement,targetElement) {
        leftout.onclick = function(){  	
              var firstChild = queue.firstChild;
        		 queue.removeChild(firstChild);
+           alert(firstChild.innerText);
        }
 //右侧出
        rightout.onclick = function(){ 
              var lastChild = queue.lastChild;
        		 queue.removeChild(lastChild);
+           alert(lastChild.innerText);
        }
 	}
 </script>
