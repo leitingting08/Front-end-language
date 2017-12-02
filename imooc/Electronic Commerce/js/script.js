@@ -37,14 +37,24 @@ $(document).on('click','.layer-content p a',function(){
 })
 
 //登录注册的验证
-function validate(submit){
-  $(submit).click(function(){
-     if($('[name=username]')!==/^0{0,1}(13[0-9]|15[7-9]|153|156|18[7-9])[0-9]{8}$/ | /^[A-Za-z0-9\u4e00-\u9fa5]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/){
-      $('.err-msg1').html("请输入正确的邮箱或手机号码！")
+  $('input[name=username]').blur(function(){
+     if($(this)!==/^0{0,1}(13[0-9]|15[7-9]|153|156|18[7-9])[0-9]{8}$/ | /^[A-Za-z0-9\u4e00-\u9fa5]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/){
+      $(this).next().text('请输入正确的邮箱或手机号码！');
      }
   });
-}
-validate('#loginSubmitBtn');
+
+  $('input[name=password]').blur(function(){
+     if($(this)!==/^[^\s]{6,16}$/){
+      $(this).next().text('6-16位密码，区分大小写，不包含空格！');
+     }
+  });
+
+  $('input[name=verify]').blur(function(){
+     if($(this)!==/^\d{4}$/){
+      $(this).next().text('验证码错误！');
+     }
+  });
+
 
 
 //鼠标滑过列表显示下拉菜单
@@ -159,3 +169,15 @@ $(document).on('click','.row2 h2 p a',function(){
   $(this).parents('.row2').find('ul').hide();
   $(this).parents('.row2').find('ul').eq(index).show();
 })
+
+
+window.onscroll = function () {
+  var t = document.documentElement.scrollTop || document.body.scrollTop;
+            var LoginBox = document.getElementById("FloorBox");
+            if (t >= 2200) {
+                LoginBox.style.display = "none";
+            } else {
+                LoginBox.style.display = "block";
+            }
+
+}

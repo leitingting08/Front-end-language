@@ -327,16 +327,16 @@
 
 <!-- 楼层区 -->
 <!-- 左侧楼层导航 -->
-<div class="nav-floor">
+<div class="nav-floor" id="FloorBox" style="display: none;">
 	<ul>
-		<li><a href="javascript:;f1">1F</a></li>
-		<li><a href="javascript:;f2">2F</a></li>
-		<li><a href="javascript:;f3">3F</a></li>
-		<li><a href="javascript:;f4">4F</a></li>
-		<li><a href="javascript:;f5">5F</a></li>
+		<li><a href="#f1">1F</a></li>
+		<li><a href="#f2">2F</a></li>
+		<li><a href="#f3">3F</a></li>
+		<li><a href="#f4">4F</a></li>
+		<li><a href="#f5">5F</a></li>
 	</ul>
-</div>
-<div class="row2">
+</div id="FloorBox">
+<div class="row2" id="f1">
 	<h2><span><a name="f1">1F</a></span>服装鞋包
 	<p><a href="javascript:void(0)" id="0">大牌<img src="img/floor-arrow.png" class="imgshow"></a>|<a href="javascript:void(0)" id="1">男装<img src="img/floor-arrow.png"></a>|<a href="javascript:void(0)" id="2">女装<img src="img/floor-arrow.png"></a></p>
 	</h2>
@@ -419,7 +419,7 @@
 		</li>
 	</ul>
 </div>
-<div class="row2">
+<div class="row2" id="f2">
 	<h2><span><a name="f2">2F</a></span>个护美妆
 	<p><a href="javascript:;">热门<img src="img/floor-arrow.png" class="imgshow"></a>|<a href="javascript:;">国际大牌<img src="img/floor-arrow.png" ></a>|<a href="javascript:;">国际名品<img src="img/floor-arrow.png"></a></p>
 	</h2>
@@ -501,7 +501,7 @@
 		</li>
 	</ul>
 </div>
-<div class="row2">
+<div class="row2" id="f3">
 	<h2><span><a name="f3">3F</a></span>手机通讯
 	<p><a href="javascript:;">热门<img src="img/floor-arrow.png" class="imgshow"></a>|<a href="javascript:;">品质优选<img src="img/floor-arrow.png"></a>|<a href="javascript:;">新机尝鲜<img src="img/floor-arrow.png"></a></p>
 	</h2>
@@ -583,7 +583,7 @@
 		</li>
 	</ul>
 </div>
-<div class="row2">
+<div class="row2" id="f4">
 	<h2><span><a name="f4">4F</a></span>家用电器
 	<p><a href="javascript:;">热门<img src="img/floor-arrow.png" class="imgshow"></a>|<a href="javascript:;">大家电<img src="img/floor-arrow.png"></a>|<a href="javascript:;">生活电器<img src="img/floor-arrow.png"></a></p>
 	</h2>
@@ -665,8 +665,8 @@
 	   		<p class="price">￥479</p>
 		</li>
 	</ul>
-	</div>
-	<div class="row2">
+</div>
+<div class="row2" id="f5">
 	<h2><span><a name="f5">5F</a></span>电脑数码
 	<p><a href="javascript:;">热门<img src="img/floor-arrow.png" class="imgshow"></a>|<a href="javascript:;">电脑平板<img src="img/floor-arrow.png"></a>|<a href="javascript:;">潮流影音<img src="img/floor-arrow.png"></a></p>
 	</h2>
@@ -748,7 +748,7 @@
 	   		<p class="price">￥479</p>
 		</li>
 	</ul>
-	</div>
+</div>
 
 
 
@@ -829,9 +829,9 @@
 	</div>
 
 	<div id="regeHtml" class="con">
-		<input class="input" type="text" name="username1" placeholder="请输入注册邮箱/手机号"  />
+		<input class="input" type="text" name="username" placeholder="请输入注册邮箱/手机号"  />
 		<P class="msg erro-msg3"></P>
-		<input class="input" type="password" name="verify" placeholder="请输入验证码" id="verify" /><img src="img/verify.png" id="img-verify">
+		<input class="input" type="text" name="verify" placeholder="请输入验证码" id="verify" /><img src="img/verify.png" id="img-verify">
 		<P class="msg erro-msg4"></P>
 		<button id="loginSubmitBtn1">注册</button>
 	</div>
