@@ -4,15 +4,15 @@ ul li{list-style: none;}
 a{text-decoration: none;color: #000;}
 /*遮罩层和弹出框*/
 .layer-mask{display:none;position:fixed;z-index: 999;left: 0;right: 0;top: 0;bottom: 0;margin: auto;width:100%;height: 100%;background:rgba(0,0,0,0.5);}
-.layer-pop{display:none;position:fixed;z-index: 1000;left: 0;right: 0;top: 0;bottom: 0;margin: auto;width: 260px;height:300px;background-color: #fff;border-radius: 5px;}
+.layer-pop{display:none;position:fixed;z-index: 1000;left: 0;right: 0;top: 0;bottom: 0;margin: auto;width: 262px;height:auto;max-height:280px;background-color: #fff;border-radius: 5px;}
 .layer-content{padding: 20px;width: 220px;}
 
 /*弹出登录注册框内容*/
 
-.input{height: 30px;width: 210px;color: #ccc;padding-left: 10px;}
+.input{height: 30px;width: 210px;padding-left: 10px;}
 #loginSubmitBtn{width: 220px;height: 30px;background-color:  #f01414;border: none;color: #fff;}
-.l{border-bottom: 2px solid #f01414;color: #f01414;margin-right: 20px;}
-.r{border-bottom: 2px solid #f01414;color: #f01414;margin-left: 20px;}
+.active{border-bottom: 2px solid #f01414;color: #f01414;margin-right: 20px;}
+#loge{margin-right: 10px;}
 #rege:hover{border-bottom: 2px solid #f01414;color: #f01414;}
 #loge:hover{border-bottom: 2px solid #f01414;color: #f01414;}
 
@@ -27,6 +27,7 @@ a{text-decoration: none;color: #000;}
 
 #verify{width: 130px;float: left;}
 #img-verify{float: left;margin: 12px 0px 0px 5px;}
+.msg{color: red;}
 /*头部标题栏header*/
 /*横线上面的一栏*/
 .header{width: 100%;background-color: #f3f5f7;}
@@ -131,12 +132,12 @@ table td{padding: 10px;width:50px;text-align: center;border: 1px solid #d9dde1; 
 .row2 h2 span a{background-color: #000;color: #fff;border-radius: 50%;font-size: 12px;padding: 5px;font-weight: normal;line-height: 50px;margin-right: 10px;}
 .row2 h2 p{float: right;font-size: 12px;color: #93999f;font-weight: normal;line-height: 50px;}
 .row2 h2 p a{margin-left: 15px;margin-right: 15px;position: relative;}
-.row2 p img{float: right;margin-top: -8px;display: none;}
-.row2 h2 p a img{position: absolute;top: 34px;margin-left: -60%;}
+.row2 p img{float: right;margin-top: -8px;position: absolute;top: 34px;margin-left: -60%;display: none;}
+/*.row2 h2 p a img{}*/
 .row2 ul{display: none;}
 .row2 ul li p{margin-top: 10px;}
-/*.f{display: inline-block;}
-.ul1{display: inline-block;}*/
+.imgshow{display: inline-block!important;}
+
 
 /*左侧楼层导航*/
 .nav-floor{position: fixed;top:50%;margin-left:-30px;width: 30px;float: left;line-height: 20px;}

@@ -1,78 +1,50 @@
 $(document).ready(function(){
 // 点击弹出登录框
-$("#loginLink").click(function(){
-    var loginHtml = $("#loginHtml").html();
-     showLayer(loginHtml,260,290,closeCallback);
-     $("#loginSubmitBtn").click(function(){
-        var username = $("input[name='username']").val();
-        var password = $("input[name='password']").val();
-        if(username === 'imooc' && password === 'imooc'){
-            alert("登录成功");
-        }else {
-            $(".error-msg").html("账号密码输入错误");
-        }
-     });
+$(document).on('click','#loginLink',function(){
+    showLayer();
+    $('#loginHtml').show();
+    $('#regeHtml').hide();
+    $('#loge').addClass('active');
+    $('#rege').removeClass('active');
 });
 
-$("#regeLink").click(function(){
-    var regeHtml = $("#regeHtml").html();
-     showLayer(regeHtml,260,250,closeCallback);
-
-     $("#loginSubmitBtn1").click(function(){
-        var username = $("input[name='username']").val();
-        var verify = $("input[name='verify']").val();
-        if(username === 'imooc' && verify === 'Gyyd'){
-            alert("注册成功");
-        }else{
-            $(".error-msg3").html("账号密码输入错误");
-        }
-     });
+$(document).on('click','#regeLink',function(){
+    showLayer();
+    $('#loginHtml').hide();
+    $('#regeHtml').show();
+    $('#rege').addClass('active');
+    $('#loge').removeClass('active');
 });
 
-function closeCallback(){
-    $(".error-msg").html("");
-}
-
-$("#rege").click(function(){
-  showLayer(loginHtml,260,290,closeCallback);
-});
-$("#loge").click(function(){
-  showLayer(loginHtml,260,290,closeCallback);
-});
 
 //显示弹出层
-function showLayer(html,width,height,closeCallback){
-    $(".layer-mask").css('display','block');
-    $(".layer-pop").css('display','block');
-    $(".layer-pop").css({
-        width:width,
-        height:height
-    });
-    $(".layer-content").html(html);
-
+function showLayer(){
+    $(".layer-mask").show();
+    $(".layer-pop").show();
+    //隐藏弹出层
     $(".close-btn").click(function(){
-        hideLayer();
-        closeCallback();
+      $(".layer-mask").hide();
+    $(".layer-pop").hide();
     });
 }
 
-//隐藏弹出层
-function hideLayer(){
-   $(".layer-mask").hide();
-   $(".layer-pop").hide();
+
+//点击登录注册进行切换
+$(document).on('click','.layer-content p a',function(){
+  var index = $(this).index();
+  $(this).addClass('active').siblings().removeClass('active');
+  $(this).parents('.layer-content').find('.con').eq(index).show().siblings('.con').hide();
+})
+
+//登录注册的验证
+function validate(submit){
+  $(submit).click(function(){
+     if($('[name=username]')!==/^0{0,1}(13[0-9]|15[7-9]|153|156|18[7-9])[0-9]{8}$/ | /^[A-Za-z0-9\u4e00-\u9fa5]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/){
+      $('.err-msg1').html("请输入正确的邮箱或手机号码！")
+     }
+  });
 }
-
-
-//点击框里的登录，注册字，跳转到相应页面
-$("#loge").click(function(){
-   $(".layer-pop").hide();
-    showLayer(logeHtml,260,300,closeCallback);
-});
-
-$("#rege").click(function(){
-   $(".layer-pop").hide();
-    showLayer(regeHtml,260,250,closeCallback);
-});
+validate('#loginSubmitBtn');
 
 
 //鼠标滑过列表显示下拉菜单
@@ -177,3 +149,13 @@ function changOption(curIndex){
 $(".f").show();
 $(".ul1").show();
 });
+
+
+//商品楼层的tab切换
+$(document).on('click','.row2 h2 p a',function(){
+  var index = $(this).index();
+  $(this).parents('.row2').find('img').removeClass('imgshow');
+  $(this).find('img').addClass('imgshow');
+  $(this).parents('.row2').find('ul').hide();
+  $(this).parents('.row2').find('ul').eq(index).show();
+})
