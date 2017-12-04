@@ -76,7 +76,7 @@ hr{border: none;background-color: #cdd0d4;height: 1px;}
 .main{width: 1200px;margin: 0 auto;position: relative;}
 /*左边红色列表栏*/
 .nav-left{width: 208px;height:54px;background-color:#c81414;position: absolute;top: -54px;}
-.nav-left img,span{line-height: 54px;color: #fff;}
+.nav-left img,.nav-left span{line-height: 54px;color: #fff;}
 .nav-left img{margin-right: 10px;margin-left: 20px;}
 .left{width: 208px;height: 512px;background-color:#f01414;position: absolute;top: 0px;}
 .left ul{height: 512px;}
@@ -106,7 +106,7 @@ hr{border: none;background-color: #cdd0d4;height: 1px;}
 .button:hover{background-color: #333;opacity: 0.6;filter:alpha(60);}
 .dots{position: absolute;bottom: 20px;left: 50%;margin-left: -50px;}
 .dots span{display: inline-block;width: 10px;height: 10px;border-radius: 50%;line-height: 10px;background-color: rgba(7,17,27,0.4);box-shadow: 0 0 0 1px rgba(255,255,255,0.9) inset;margin-right: 8px;cursor: pointer;}
-.dots span.active{box-shadow: 0 0 0 2px rgba(7,17,27,0.4) inset;background-color: #fff;}
+.dots span.d-active{box-shadow: 0 0 0 2px rgba(7,17,27,0.4) inset;background-color: #fff;}
 
 /*右侧栏*/
 .right{width: 244px;height: 502px;border:1px solid #d9dde1;position: absolute;right: 0;top: 10px;}
@@ -134,6 +134,7 @@ table td{padding: 10px;width:50px;text-align: center;border: 1px solid #d9dde1; 
 .row2 h2 p a{margin-left: 15px;margin-right: 15px;position: relative;}
 .row2 p img{float: right;margin-top: -8px;position: absolute;top: 34px;margin-left: -60%;display: none;}
 /*.row2 h2 p a img{}*/
+.row2 ul:nth-child(1){display: block;}
 .row2 ul{display: none;}
 .row2 ul li p{margin-top: 10px;}
 .imgshow{display: inline-block!important;}
@@ -150,9 +151,9 @@ table td{padding: 10px;width:50px;text-align: center;border: 1px solid #d9dde1; 
 
 /*右侧固定导航栏*/
 .right-nav{position: fixed;top: 30%;right: 0;}
-.right-nav ul{width: 40px;}
-.right-nav ul li span{float:right;background-color: #ccc;display: none;}
-.right-nav ul li{float: right;height: 36px;}
+.right-nav ul{overflow: hidden;}
+.right-nav ul li span{/*float:left;*/background-color: #ccc;color:#fff;padding: 8px 5px;position: absolute;right: 32px;display: none;z-index: 100;}
+.right-nav ul li{height: 36px;width:100px;position: relative;}
 .right-nav ul li img{float: right;background: rgba(7,17,27,0.1);}
 .right-nav ul li img:hover{background-color: #ccc;}
 

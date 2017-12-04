@@ -99,7 +99,7 @@ $(document).ready(function(){
 
     //  初始化状态，在第一张
     $(".banner img:not(:first-child)").hide();
-    $(".dots span:first-child").addClass("active");
+    $(".dots span:first-child").addClass("d-active");
 
    // 滑过鼠标清除定时器,滑开继续
     $(".banner").hover(function(){
@@ -126,13 +126,13 @@ $(document).ready(function(){
 
     //点击按钮切换
     $(".prev").click(function(){
-        count=$(".active").index();
+        count=$(".d-active").index();
         count--;
         if(count < 0){count=len-1;}
         changOption(count);
     });
     $(".next").click(function(){
-        count=$(".active").index();
+        count=$(".d-active").index();
         count++;
         if(count > len-1){count=0;}
         changOption(count);
@@ -148,8 +148,8 @@ function showAuto(){
 
 //封装点击小圆点改变背景及自身样式的changeOption()函数
 function changOption(curIndex){
-   $(".dots span").siblings().removeClass("active");//查找其他子节点并移除类
-   $(".dots span").eq(curIndex).addClass("active");//给当前点击的对象添加类
+   $(".dots span").siblings().removeClass("d-active");//查找其他子节点并移除类
+   $(".dots span").eq(curIndex).addClass("d-active");//给当前点击的对象添加类
    $(".banner img").filter(":visible").hide().parent().children().eq(curIndex).show();
    index=curIndex;
 }
@@ -170,14 +170,24 @@ $(document).on('click','.row2 h2 p a',function(){
   $(this).parents('.row2').find('ul').eq(index).show();
 })
 
-
+//当滚动条滚动到楼层区时，楼层索引显示出来
 window.onscroll = function () {
   var t = document.documentElement.scrollTop || document.body.scrollTop;
             var LoginBox = document.getElementById("FloorBox");
-            if (t >= 2200) {
-                LoginBox.style.display = "none";
-            } else {
+            if (t >500) {
                 LoginBox.style.display = "block";
+            } else {
+                LoginBox.style.display = "none";
             }
 
 }
+
+
+//右侧栏鼠标进入显示相应的文字
+$(document).on('mouseenter','.right-nav ul li img',function(){
+  $(this).parents('li').find('span').show();
+})
+
+$(document).on('mouseleave','.right-nav ul li img',function(){
+  $(this).parents('li').find('span').hide();
+})
