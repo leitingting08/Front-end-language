@@ -513,6 +513,7 @@ ol.type li a:hover {
 	height: 260px;
 	overflow: hidden;
 	position: relative;
+	background: #fff;
 }
 .hover-bg .hover-text {
 	position: absolute;
@@ -709,4 +710,4 @@ nav#footer p {
 	color: #F4D03F;
 }
 
-
+img{margin:0 auto;}
