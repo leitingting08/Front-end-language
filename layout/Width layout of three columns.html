@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>三栏等宽布局</title>
+	<style>
+        html *{padding: 0;margin:0;}
+        body{height: 100%;width: 100%;}
+        .layout {height: 100%;}
+        .layout div{width:25%;}
+    </style>
+</head>
+<body>
+<!-- 绝对定位布局 -->
+<section class="layout absolute">
+	<style>
+	    .layout.absolute .con>div{position: absolute;}
+	 	.layout.absolute .top{background: red;top: 0;height:100px;}
+		.layout.absolute .center{background: yellow;top:100px;bottom:100px;}
+		.layout.absolute .bottom{background: blue;bottom:0;height:100px;}
+	</style>
+	<article class="con">
+		<div class="top"></div>
+		<div class="center">
+			<h1>绝对定位</h1>
+			这是中间部分的内容
+		</div>
+		<div class="bottom"></div>
+	</article>
+</section>
+<!-- box-sizing布局 -->
+<section class="layout absolute2">
+    <style>
+    .layout.absolute2{margin-left: 30%;}
+    .layout.absolute2 .con{height: 100%;}
+    .layout.absolute2 .top{background: red;height: 100px;position: absolute;z-index: 20;top:0;}
+    .layout.absolute2 .center{background: yellow;position: absolute;top:100px;bottom:100px;z-index: 10;}
+    .layout.absolute2 .bottom{background: blue;height: 100px;position: absolute;z-index: 20;bottom:0;}
+    </style>
+    <article class="con">
+        <div class="top"></div>
+        <div class="center">
+            <h1>绝对定位布局</h1>
+            这是中间部分的内容
+        </div>
+        <div class="bottom"></div>
+    </article>
+</section>
+<!-- box-sizing布局 -->
+<section class="layout boxSizing">
+    <style>
+    .layout.boxSizing{margin-left: 60%;}
+    .layout.boxSizing .con{height: 100%;}
+    .layout.boxSizing .top{background: red;height: 100px;position: absolute;z-index: 20;top:0;}
+    .layout.boxSizing .center{background: yellow;z-index: 10;height: 100%;position: absolute;top:0;box-sizing: border-box;border-top:100px solid red;border-bottom:100px solid blue;}
+    .layout.boxSizing .bottom{background: blue;height: 100px;position: absolute;z-index: 20;bottom:0;}
+    </style>
+    <article class="con">
+        <div class="top"></div>
+        <div class="center">
+            <h1>box-sizing布局</h1>
+            这是中间部分的内容
+        </div>
+        <div class="bottom"></div>
+    </article>
+</section>
+</body>
+</html>
