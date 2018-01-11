@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>原型链</title>
+</head>
+<body>
+<script>
+    //第一种方式：字面量
+    var o1={name:'o1'};
+    var o2=new Object({name:'o2'});
+    //第二种方式：通过构造函数
+    var M=function(){this.name=name} //使用显示的构造函数创建对象
+    var o3=new M();
+    //第三种方式：Object.create
+    var P={name:'p'};
+    var o4=Object.create(P)
+</script>
+</body>
+</html>
