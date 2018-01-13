@@ -10,10 +10,14 @@
     var o2=new Object({name:'o2'});
     //第二种方式：通过构造函数
     var M=function(){this.name=name} //使用显示的构造函数创建对象
-    var o3=new M();
+    var o3=new M('o3');
     //第三种方式：Object.create
     var P={name:'p'};
     var o4=Object.create(P)
+
+    M.prototype.say = function() {
+        this.say='hi'
+    };
 </script>
 </body>
 </html>
