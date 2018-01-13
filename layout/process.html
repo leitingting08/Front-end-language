@@ -6,12 +6,32 @@
 <body>
 <script>
     //打印结果1 3 2
-    //js是单线程，任务队列，同步任务优先于异步任务
+    //js是单线程(一个时间内JS只能干一件事)
+    //任务队列，有同步任务和异步任务，同步任务优先于异步任务
+    //Event Loop事件循环 同步任务放在运行栈中  异步任务是放在异步任务队列中
+    //异步任务有：setTimeout setInterval DOM事件  ES6中的promise
     console.log(1);//同步任务
     setTimeout(function(){//setTimeout是异步任务，异步任务要挂起
         console.log(2)
     },0);
     console.log(3);
+
+     //打印结果是A
+    console.log('A');
+    setTimeout(function(){
+        console.log('B');
+    },0);
+    while(1){//while循环是同步任务
+
+    }
+
+    //打印结果是4
+    for(var i=0;i<4;i++){//for循环是同步任务
+        setTimeout(function(){
+            console.log(i);
+        },1000)
+    }
+    //异步队列放入时间和执行时间
 </script>
 </body>
 </html>
