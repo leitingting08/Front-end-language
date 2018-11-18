@@ -1,4 +1,5 @@
 // 原型链继承的例子(封装dom查询的例子)
+
 function Elem(id){
 	var this.elem = document.getElementById(id)
 }
