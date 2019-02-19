@@ -1,0 +1,46 @@
+<!DOCTYPE HTML> 
+<html> 
+<head> 
+<meta charset="utf-8" /> 
+<title>闭包演示</title> 
+<style type="text/css">
+     	p {background:gold;}
+</style>
+ <script type="text/javascript">
+  // 不应用闭包，弹出的都是5
+ 	// function init() {
+  //         var pAry = document.getElementsByTagName("p");
+  //         for( var i=0; i<pAry.length; i++ ) {
+  //              pAry[i].onclick = function() { 
+  //            	 alert(i);
+  //              }
+  //    	}
+  // }
+
+  // 用闭包
+  function init() {
+          var pAry = document.getElementsByTagName("p");
+          for( var i=0; i<pAry.length; i++ ) {
+            // 闭包--作为函数返回
+               pAry[i].onclick = (function(msg) { 
+                 var showmsg = function(){
+                    alert(msg)
+                  }
+                  return showmsg
+               })(i)
+               // 闭包--作为参数传递
+               // pAry[i].onclick = (function(i) { 
+               //   alert(i)
+               // })(i)
+       }
+  }
+</script>
+ </head>
+ <body onload="init();">
+ <p>产品 0</p>
+ <p>产品 1</p>
+ <p>产品 2</p>
+ <p>产品 3</p>
+ <p>产品 4</p>
+ </body>
+ </html>  
