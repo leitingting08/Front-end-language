@@ -21,15 +21,15 @@
   function init() {
           var pAry = document.getElementsByTagName("p");
           for( var i=0; i<pAry.length; i++ ) {
-            // 闭包--作为函数返回
+            // 闭包--作为函数返回(点击列表会出现对应的数字)
                pAry[i].onclick = (function(msg) { 
                  var showmsg = function(){
                     alert(msg)
                   }
                   return showmsg
                })(i)
-               
-               // 闭包--作为参数传递
+
+               // 加载的时候会依次弹出01234
                // pAry[i].onclick = (function(i) { 
                //   alert(i)
                // })(i)
