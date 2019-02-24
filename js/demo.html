@@ -1,0 +1,78 @@
+<!DOCTYPE HTML> 
+<html> 
+<head> 
+<meta charset="utf-8" /> 
+<title>闭包演示</title> 
+<style type="text/css">
+     	p {background:gold;}
+</style>
+ <script type="text/javascript">
+  window.onload=function(){
+    // 1. 同步异步问题的理解
+    var a = 2;
+    setTimeout(function(){
+      a--;
+    })
+    for(var i=0;i<10000;i++){
+      a++
+    }
+
+    function promise(){ // 利用promise把setTimeout这个异步函数变同步先执行
+      return new Promise((resolve,reject)=>{
+        setTimeout(function(){
+          resolve(a--)
+        })
+      })
+    }
+    promise().then(res=>{
+      console.log(res) // 10001
+    })
+    console.log(a) // 10002
+
+
+    // 2. 连续输入的时候不触发搜索，当用户停下来1s以上时再触发搜索
+    var timer = null;
+    var input = document.getElementById('input0')
+    input.addEventListener('input',()=>{
+      clearTimeout(timer)
+      timer = setTimeout(()=>{
+        console.log('111')
+      },1000)
+    })
+
+
+    // 关于this的理解
+    var obj = {
+      name1:'zhangsan',
+      say:function(){
+        return this.name1
+        // 延时函数内部的回调函数的this指向全局对象window (可以通过bind方法改变其内部函数的this指向)
+        // setTimeout(function(){return this.name1})
+        // setTimeout(()=>{return this.name1})
+      },
+      name2:this.name1 // this指向window
+    }
+
+    console.log(obj.say()) // zhangsan(this指向调用它的对象)--如果加了延时，则this指向window，打印undefined
+    // console.log(obj.name2) // undefined--window.name1
+
+    // 3. 跨域方案
+    // 跨域--浏览器同源策略
+    // 1. jsonp
+    // 2. cors(跨域资源共享)--最常用
+    // 3. nginx
+    // 4. websocket协议跨域
+    // 5. postMessage
+    // 6. nodejs中间件
+    // 7. document.domain+iframe
+    // 8. location.hash+iframe
+    // 9. window.name+iframe
+}
+
+  
+</script>
+ </head>
+ <body>
+ <input type="text" id="input0" />
+ </body>
+ </html>  
