@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>css优先级</title>
+	<style type="text/css">
+		div>p{color: blue;}/**/
+		h1+p{color: red;}
+		div~p{color: yellow;}
+	</style>
+</head>
+<body>
+	<div>
+		<h1>1111</h1>
+		<p>1111</p>
+		<p>1111</p>
+		<div>
+			<h1>1111</h1>
+			<p>1111</p>
+			<p>1111</p>
+		</div>
+	</div>
+</body>
+</html>
