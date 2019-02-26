@@ -3,20 +3,28 @@
 <head>
 	<title>css优先级</title>
 	<style type="text/css">
-		div>p{color: blue;}/**/
-		h1+p{color: red;}
-		div~p{color: yellow;}
+		div>p{color: blue;}/*子元素选择器--选择class为myclass下的所有子元素p元素*/
+		h1+p{color: red;}/*兄弟元素选择器--选择和h1的所有兄弟元素p元素*/
+		.myclass h1~p{color: yellow;}/*兄弟元素选择器--选择h1后面所有的p元素*/
 	</style>
 </head>
 <body>
-	<div>
+	<div class="myclass">
+		<p>1111</p><!-- 蓝色 -->
 		<h1>1111</h1>
-		<p>1111</p>
-		<p>1111</p>
+		<p>1111</p><!-- 红色 -->
+		<p>1111</p><!-- 蓝色 -->
 		<div>
+			<p>1111</p><!-- 蓝色 -->
 			<h1>1111</h1>
-			<p>1111</p>
-			<p>1111</p>
+			<p>1111</p><!-- 红色 -->
+			<p>1111</p><!-- 蓝色 -->
+		</div>
+		<div class="myclass">
+			<p>1111</p><!-- 蓝色 -->
+			<h1>1111</h1>
+			<p>1111</p><!-- 黄色 -->
+			<p>1111</p><!-- 黄色 -->
 		</div>
 	</div>
 </body>
