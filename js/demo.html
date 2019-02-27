@@ -67,6 +67,17 @@
     // 7. document.domain+iframe
     // 8. location.hash+iframe
     // 9. window.name+iframe
+
+    // 4. 冒泡排序
+    function sort(arr){
+      for(var i=0;i<arr.length-1;i++){
+        for(var j=0;j<arr.length-i-1;j++){
+          var temp = arr[j];
+          arr[j] = arr[j+1];
+          arr[j+1]=temp;
+        }
+      }
+    }
 }
 
   
@@ -74,5 +85,5 @@
  </head>
  <body>
  <input type="text" id="input0" />
- </body>
- </html>  
+</body>
+</html>  
