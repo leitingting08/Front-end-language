@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>伪类实现1px边框</title>
+  <meta name="viewport"   content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <style type="text/css">
+   html {  
+       font-size: 1rem;  
+    }             
+    * {  
+        padding: 0;  
+        margin: 0;  
+    }  
+    div{width: 100%;padding:15px;}
+    span{padding:10px;margin:30px 10px;display: inline-block;}
+  .box-shadow-1px {
+    box-shadow: inset 0px -1px 1px -1px #666;
+  }
+  .scale-1px{
+    position: relative;
+    border:none;
+  }
+  .scale-1px:after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left:0;
+    background: #d8d8d8;
+    width: 100%;
+    height: 1px;
+    -webkit-transform: scaleY(0.5);
+    transform: scaleY(0.5);
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+  }
+  .border{border-bottom:1px solid #d8d8d8;}
+  .borders{border:1px solid #d8d8d8;border-radius:40px;}
+  .border1px{position: relative;}
+  .border1px:after{content: '';position: absolute;top: 0;left: 0;border:1px solid #d8d8d8;width: 200%;height: 200%;border-radius:80px;transform: scale(0.5);box-sizing: border-box;transform-origin: left top;
+-webkit-transform: scale(0.5);-webkit-box-sizing: border-box;
+-webkit-transform-origin: left top;}
+  </style>
+</head>
+<body>
+  <div class="box-shadow-1px">我是用box-shadow来实现的</div>
+  <div class="scale-1px">我的底部边框是伪类实现的</div>
+  <div class="border">我是直接写border 1px的</div>
+
+  <span class="border1px">我四周边框是伪类实现</span> <br/>
+  <span class="borders">我是四周边框直接写border 1px的</span>
+
+</body>
+</html>
