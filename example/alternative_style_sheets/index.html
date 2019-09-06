@@ -1,0 +1,35 @@
+<head>
+<link href="reset.css" rel="stylesheet" type="text/css">
+<link href="default.css" rel="stylesheet" type="text/css" title="Default Style">
+<link href="red.css" rel="alternate stylesheet" type="text/css" title="red">
+<link href="green.css" rel="alternate stylesheet" type="text/css" title="green">
+</head>
+
+<div>
+<div class="box">
+    <p>文字颜色</p>
+</div>
+
+<p>
+    选择样式：
+    <input id="default" type="radio" name="skin" value="default.css" checked><label for="default">默认</label>
+    <input id="red" type="radio" name="skin" value="red.css"><label for="red">红色</label>
+    <input id="green" type="radio" name="skin" value="green.css"><label for="green">绿色</label>
+</p>
+</div>
+
+<script>
+var eleLinks = document.querySelectorAll('link[title]');
+var eleRadios = document.querySelectorAll('input[type="radio"]');
+[].slice.call(eleRadios).forEach(function (radio) {
+    radio.addEventListener('click', function () {
+        var value = this.value;
+        [].slice.call(eleLinks).forEach(function (link) {
+            link.disabled = true;
+            if (link.getAttribute('href') == value) {
+                link.disabled = false;
+            }
+        });
+    });
+});
+</script>
