@@ -21,15 +21,16 @@
 <script>
 var eleLinks = document.querySelectorAll('link[title]');
 var eleRadios = document.querySelectorAll('input[type="radio"]');
-[].slice.call(eleRadios).forEach(function (radio) {
+eleRadios.forEach(function(radio){
     radio.addEventListener('click', function () {
         var value = this.value;
-        [].slice.call(eleLinks).forEach(function (link) {
+        eleLinks.forEach(function (link) {
             link.disabled = true;
             if (link.getAttribute('href') == value) {
                 link.disabled = false;
             }
         });
     });
-});
+})
+
 </script>
