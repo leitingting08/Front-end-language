@@ -196,6 +196,7 @@ class MyPromise {
   resolve = value => {
     if(status !== PENDING) return;
     this.statsus = FULLFILLED
+    // 成功的返回值
     this.value = value
     // this.successCallback && this.successCallback
     while(this.successCallback.length) this.successCallback.shift()()
@@ -203,15 +204,17 @@ class MyPromise {
   reject = reason => {
     if(status !== PENDING) return;
     this.statsus = REJECTED
+    // 失败原因
     this.reason = reason
     // this.failCallback && this.failCallback
     while(this.failCallback.length) this.failCallback.shift()()
   }
   then(successCallback, failCallback) {
+    // 如果有返回值就返回，以此支持链式调用
     successCallback = successCallback ? successCallback : value => value;
     failCallback = failCallback ? failCallback : error => { throw error }
     let promise2 = new MyPromise((resolve, reject) => {
-            if (this.status === FULFILLED) {
+            if (this.status === FULFILLED) { // 支持异步
                 setTimeout(() => {
                     try {
                         let x = successCallback(this.value)
@@ -230,7 +233,7 @@ class MyPromise {
                     }
                 }, 0)
             }else {
-                //等待
+                // 等待
                 this.successCallback.push(() => {
                     setTimeout(() => {
                         try {
@@ -255,9 +258,11 @@ class MyPromise {
         })
         return promise2
   }
+  // 捕获错误
   catch(cb){
         return this.then(undefined,cb)
     }
+    // 不管成功还是失败 finally内容都会被调起
     finally(cb) {
         return this.then(value => {
             return MyPromise.resolve(cb()).then(() => value);
@@ -265,6 +270,7 @@ class MyPromise {
             return MyPromise.resolve(cb()).then(() => { throw err })
         })
     }
+    // all 按顺讯调用
     static all(arr) {
         let result = [];
         let index = 0;
@@ -288,6 +294,7 @@ class MyPromise {
 
         })
     }
+    // resolve 返回值
     static resolve(value) {
         if (value instanceof MyPromise) {
             return value
@@ -297,6 +304,7 @@ class MyPromise {
     }
 }
 
+// 返回promise 对象
 function resolvePromise(x, resolve, reject) {
   if(x instanceof MyPromise) {
     // x.then(value=>resolve(value), reson=>reject(reason))
