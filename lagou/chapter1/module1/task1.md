@@ -198,18 +198,14 @@ class MyPromise {
     this.statsus = FULLFILLED
     this.value = value
     // this.successCallback && this.successCallback
-    while (this.successCallback.length) {
-        this.successCallback.shift()()
-    }
+    while(this.successCallback.length) this.successCallback.shift()()
   }
   reject = reason => {
     if(status !== PENDING) return;
     this.statsus = REJECTED
     this.reason = reason
     // this.failCallback && this.failCallback
-    while (this.failCallback.length) {
-        this.failCallback.shift()()
-    }
+    while(this.failCallback.length) this.failCallback.shift()()
   }
   then(successCallback, failCallback) {
     successCallback = successCallback ? successCallback : value => value;
@@ -301,15 +297,12 @@ class MyPromise {
     }
 }
 
-function resolvePromise(promise2, x, resolve, reject) {
-    if (promise2 === x) {
-        return reject(new TypeError('重复引用了'))
-    }
-    if (x instanceof MyPromise) {
-        // x.then(value=>resolve(value),err=>reject(err))
-        x.then(resolve, reject)
-    } else {
-        resolve(x)
-    }
+function resolvePromise(x, resolve, reject) {
+  if(x instanceof MyPromise) {
+    // x.then(value=>resolve(value), reson=>reject(reason))
+    x.then(resolve,reject)
+  } else {
+    resolve(x)
+  }
 }
 ```
