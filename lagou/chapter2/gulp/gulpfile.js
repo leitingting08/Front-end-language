@@ -8,7 +8,7 @@ const browserSync = require('browser-sync')
 const bs = browserSync.create()
 
 const clean = () => {
-  return del(['dist'])
+  return del(['dist', 'temp'])
 }
 
 // const data = {
@@ -20,19 +20,22 @@ const clean = () => {
 const style = () => {
   return src('src/assets/styles/*.scss', { base: 'src' })
   .pipe(sass({ outputStyle: 'expanded' }))
-  .pipe(dest('dist'))
+  .pipe(dest('temp'))
+  .pipe(bs.reload({ stream: true }))
 }
 
 const script = () => {
   return src('src/assets/scripts/*.js', { base: 'src' })
-  .pipe(plugins.babel({presets: ['@plugins.babel/preset-env']}))
-  .pipe(dest('dist'))
+  .pipe(plugins.babel({presets: ['@babel/preset-env']}))
+  .pipe(dest('temp'))
+  .pipe(bs.reload({ stream: true }))
 }
 
 const page = () => {
   return src('src/*.html', { base: 'src' })
   .pipe(plugins.swig())
-  .pipe(dest('dist'))
+  .pipe(dest('temp'))
+  .pipe(bs.reload({ stream: true }))
 }
 
 const image = () => {
@@ -67,24 +70,41 @@ const serve = () => {
   bs.init({
     notify: false,
     // port: 6666,
-    files: 'dist/**',
+    // files: 'dist/**',
     server: {
-      baseDir: ['dist', 'src', 'public'],
+      baseDir: ['temp', 'src', 'public'],
       routes: {
-        'node_modules': 'node_modules'
+        '/node_modules': 'node_modules'
       }
     }
   })
 }
 
+const useref = () => {
+  return src('temp/*.html', { base: 'temp' })
+  .pipe(plugins.useref({ searchPath: ['temp', '.'] }))
+  // html js css 压缩
+  .pipe(plugins.if(/\.js$/, plugins.uglify()))
+  .pipe(plugins.if(/\.css$/, plugins.cleanCss()))
+  .pipe(plugins.if(/\.html$/, plugins.htmlmin({ collapseWhitespace: true, minifyCss: true, minifyJs: true })))
+  .pipe(dest('dist'))
+}
+
 const compile = parallel(style, script, page)
 
-const build = series(clean, parallel(compile,  image, font, extra))
-const dev = series(compile, extra)
+const build = series(
+  clean, 
+  parallel(series(compile, useref), 
+    image, 
+    font, 
+    extra
+    )
+  )
+
+const develop = series(compile, serve)
 
 module.exports = {
-  compile,
+  clean,
   build,
-  serve,
-  dev
+  develop
 }

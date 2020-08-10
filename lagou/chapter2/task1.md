@@ -16,7 +16,7 @@
 ### 编程题
 
 #### 1、概述脚手架实现的过程，并使用 NodeJS 完成一个自定义的小型脚手架工具
-[脚手架工具](https://github.com/leitingting08/Front/tree/master/lagou/chapter2/cli)
+[脚手架工具](https://github.com/leitingting08/Front/tree/master/lagou/chapter2/sum-cli)
 
 #### 2、尝试使用 Gulp 完成项目的自动化构建
 [Gulp](https://github.com/leitingting08/Front/tree/master/lagou/chapter2/gulp)
