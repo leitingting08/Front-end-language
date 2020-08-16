@@ -11,11 +11,12 @@ const clean = () => {
   return del(['dist', 'temp'])
 }
 
-// const data = {
-//   menus: [],
-//   pkg: require('package.json'),
-//   date: new Date()
-// }
+// const cwd = process.cwd() // 当前所在工作目录
+// let config = {}
+// try {
+//   const loadConfig = require(`${cwd}/page.config.js`)
+//   config = Object.assign({}, config, loadConfig)
+// } catch (e) {}
 
 const style = () => {
   return src('src/assets/styles/*.scss', { base: 'src' })
@@ -26,7 +27,7 @@ const style = () => {
 
 const script = () => {
   return src('src/assets/scripts/*.js', { base: 'src' })
-  .pipe(plugins.babel({presets: ['@babel/preset-env']}))
+  .pipe(plugins.babel({presets: [require('@babel/preset-env')]}))
   .pipe(dest('temp'))
   .pipe(bs.reload({ stream: true }))
 }
