@@ -21,13 +21,15 @@ inquirer
     }
   ])
   .then((answers) => {
+    // 模板目录
     const tmplDir = path.join(__dirname, 'templates')
-
+   // 目标目录
     const destDir = process.cwd()
 
     fs.readdir(tmplDir, (err, files) => {
       if (err) throw err
       files.forEach((file) => {
+        // 通过模板引擎渲染文件
         ejs.renderFile(path.join(tmplDir, file), answers, (err, result) => {
           if (err) throw err
           fs.writeFileSync(path.join(destDir, file), result)
