@@ -31,7 +31,7 @@ setTimeout(function () {
 改进后
 
 ```
-new Promise((resolve) => {resolve('hello') }).then(res=>return res + 'lagou').then(res=>return res + 'I love U').then(res=>console.log(res))
+new Promise((resolve) => {resolve('hello') }).then(res=>res + 'lagou').then(res=>res + 'I love U').then(res=>console.log(res))
 ```
 
 ### 二、基于以下代码完成下面四个练习
