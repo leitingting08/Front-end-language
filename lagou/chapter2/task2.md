@@ -39,4 +39,4 @@ Plugin 是插件，为了增强项目自动化的能力，相比于 Loader，Plu
 
 ### 1、使用 Webpack 实现 Vue 项目打包任务
 
-[Webpack](https://github.com/leitingting08/Front/tree/master/lagou/chapter2/app)
+[Webpack](https://github.com/leitingting08/Front/tree/master/lagou/chapter2/vue-app-base)
