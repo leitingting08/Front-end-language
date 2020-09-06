@@ -38,3 +38,5 @@ diff 算法是在数据改变时执行，根据真实 dom 生成虚拟 dom，当
 [Compiler](https://github.com/leitingting08/Front/tree/master/lagou/chapter3/compiler.js)
 
 ### 3、参考 Snabbdom 提供的电影列表的示例，利用 Snabbdom 实现类似的效果，如图：
+
+[Snabbdom](https://github.com/leitingting08/Front/tree/master/lagou/chapter3/snabbdom.js)
