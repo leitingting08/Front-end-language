@@ -16,7 +16,7 @@ this.dog.name = 'Trump'
 }
 }
 })
-```
+```a
 
 > vue2.x 中是利用 Object.defineProperty 用 get set 方法来做拦截的
 > 不是响应式的，因为 name 原来在对象中是不存在的，要手动设置，Vue 中提供了 set 方法来设置，
@@ -31,12 +31,12 @@ diff 算法是在数据改变时执行，根据真实 dom 生成虚拟 dom，当
 
 ### 1、模拟 VueRouter 的 hash 模式的实现，实现思路和 History 模式类似，把 URL 中的 # 后面的内容作为路由的地址，可以通过 hashchange 事件监听路由地址的变化。
 
-[vueRouter](https://github.com/leitingting08/Front/tree/master/lagou/chapter3/vueRouter.js)
+[vueRouter](https://github.com/leitingting08/Front/blob/master/lagou/chapter3/vueRouter.js)
 
 ### 2、在模拟 Vue.js 响应式源码的基础上实现 v-html 指令，以及 v-on 指令。
 
-[Compiler](https://github.com/leitingting08/Front/tree/master/lagou/chapter3/compiler.js)
+[Compiler](https://github.com/leitingting08/Front/blob/master/lagou/chapter3/complier.js)
 
 ### 3、参考 Snabbdom 提供的电影列表的示例，利用 Snabbdom 实现类似的效果，如图：
 
-[Snabbdom](https://github.com/leitingting08/Front/tree/master/lagou/chapter3/snabbdom.js)
+[Snabbdom](https://github.com/leitingting08/Front/tree/master/lagou/chapter3/snabbdom)
