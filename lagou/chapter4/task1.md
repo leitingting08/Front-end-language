@@ -2,7 +2,7 @@
 
 ## 1. 请简述 React 16 版本中初始渲染的流程
 
-首先 jsx 转换成 react element，第二步render渲染阶段，为每一个 react 元素构建 fiber 对象（workInProgress Fiber 树）创建 fiber 对象对应的 dom 对象，为fiber对象添加effectTag属性用来记录当前fiber要执行的dom操作，然后在render结束之后，fiber 会被保存到 fiberroot。第三步 commit 阶段，先获取到 render 的结果，在 fiberroot 中的新构建的 workInProgress Fiber 树，根据 fiber 中的 effectTag 属性进行相应的dom操作
+首先 jsx 转换成 react element，第二步render渲染阶段，为每一个 react 元素构建 fiber 对象（workInProgress Fiber 树）创建 fiber 对象对应的 dom 对象，为fiber对象添加effectTag属性用来记录当前fiber要执行的dom操作，然后在render结束之后，fiber 会被保存到 fiberroot。第三步 commit 阶段，先获取到 render 的结果，在 fiberroot 中的新构建的 workInProgress Fiber 树，根据 fiber 中的 effectTag 属性进行相应的dom操作。
 
 ## 2. 为什么 React 16 版本中 render 阶段放弃了使用递归
 
